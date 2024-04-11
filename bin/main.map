@@ -1,0 +1,1097 @@
+ASxxxx Linker V03.00/V05.40 + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _strlen
+     00000000  l_CABS                          
+     00000000  l_DABS                          
+     00000000  l_INITIALIZED                   
+     00000000  l_INITIALIZER                   
+     00000000  l__CODE                         
+     00000000  s_.debug_abbrev                 
+     00000000  s_.debug_frame                  
+     00000000  s_.debug_info                   
+     00000000  s_.debug_line                   
+     00000000  s_.debug_loc                    
+     00000000  s_.debug_pubnames               
+     00000000  s_CABS                          
+     00000000  s_DABS                          
+     00000000  s__CODE                         
+     00000001  l_SSEG                          
+     00000001  s_DATA                          
+     00000003  l_GSFINAL                       
+     00000016  l_CONST                         
+     00000023  l_GSINIT                        
+     0000006B  l_HOME                          
+     000000FF  l_.debug_pubnames               
+     000001D2  l_.debug_abbrev                 
+     00000338  l_.debug_loc                    
+     00000384  l_.debug_frame                  
+     000003E9  l_DATA                          
+     000003EA  s_INITIALIZED                   
+     000003EA  s_SSEG                          
+     00000627  l_.debug_info                   
+     000006D1  l_.debug_line                   
+     00000B33  l_CODE                          
+     00008000  s_HOME                          
+     0000806B  s_GSINIT                        
+     0000808E  s_GSFINAL                       
+     00008091  s_CONST                         
+     000080A7  s_CODE                          
+     000080A7  s_INITIALIZER                   
+
+ASxxxx Linker V03.00/V05.40 + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DATA                                00000001    000003E9 =        1001. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000001  G$g_flagMilli$0_0$0                main
+     00000001  _g_flagMilli                       main
+     00000002  G$g_millis$0_0$0                   main
+     00000002  _g_millis                          main
+     00000006  G$g_micros$0_0$0                   main
+     00000006  _g_micros                          main
+     0000000A  Fprimes$aIsPrime$0_0$0             primes
+     000003E8  Fprimes$NumPrimes$0_0$0            primes
+
+ASxxxx Linker V03.00/V05.40 + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                000003EA    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00008000    0000006B =         107. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008000  A$main$62                          main
+     00008004  A$main$63                          main
+     00008008  A$main$64                          main
+     0000800C  A$main$65                          main
+     00008010  A$main$66                          main
+     00008014  A$main$67                          main
+     00008018  A$main$68                          main
+     0000801C  A$main$69                          main
+     00008020  A$main$70                          main
+     00008024  A$main$71                          main
+     00008028  A$main$72                          main
+     0000802C  A$main$73                          main
+     00008030  A$main$74                          main
+     00008034  A$main$75                          main
+     00008038  A$main$76                          main
+     0000803C  A$main$77                          main
+     00008040  A$main$78                          main
+     00008044  A$main$79                          main
+     00008048  A$main$80                          main
+     0000804C  A$main$81                          main
+     00008050  A$main$82                          main
+     00008054  A$main$83                          main
+     00008058  A$main$84                          main
+     0000805C  A$main$85                          main
+     00008060  A$main$86                          main
+     00008064  A$main$87                          main
+     00008068  A$main$125                         main
+ASxxxx Linker V03.00/V05.40 + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000806B    00000023 =          35. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000806B  A$main$95                          main
+     0000806E  A$main$96                          main
+     0000806F  A$main$97                          main
+     00008071  A$main$98                          main
+     00008074  A$main$101                         main
+     00008077  A$main$102                         main
+     00008079  A$main$104                         main
+     0000807D  A$main$105                         main
+     0000807E  A$main$106                         main
+     00008080  A$main$108                         main
+     00008083  A$main$109                         main
+     00008085  A$main$111                         main
+     00008088  A$main$112                         main
+     0000808B  A$main$113                         main
+     0000808C  A$main$114                         main
+ASxxxx Linker V03.00/V05.40 + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000808E    00000003 =           3. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000808E  A$main$118                         main
+
+ASxxxx Linker V03.00/V05.40 + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00008091    00000016 =          22. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008091  Fmain$__str_0$0_0$0                main
+
+ASxxxx Linker V03.00/V05.40 + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000080A7  A$main$141                         main
+     000080A7  Smain$micros$0                     main
+     000080A7  Smain$micros$1                     main
+     000080A9  A$main$148                         main
+     000080A9  Smain$micros$2                     main
+     000080A9  Smain$micros$3                     main
+     000080AD  A$main$153                         main
+     000080AD  Smain$micros$4                     main
+     000080B0  A$main$154                         main
+     000080B2  A$main$158                         main
+     000080B2  Smain$micros$5                     main
+     000080B5  A$main$161                         main
+     000080B7  A$main$167                         main
+     000080B7  Smain$micros$6                     main
+     000080BB  A$main$172                         main
+     000080BB  Smain$micros$7                     main
+     000080BF  A$main$173                         main
+     000080C2  A$main$174                         main
+     000080C4  A$main$179                         main
+     000080C4  Smain$micros$8                     main
+     000080C5  A$main$180                         main
+     000080C7  A$main$181                         main
+     000080C8  A$main$183                         main
+     000080C9  A$main$184                         main
+     000080CA  A$main$187                         main
+     000080CC  A$main$188                         main
+     000080CD  A$main$190                         main
+     000080D0  A$main$191                         main
+     000080D1  A$main$192                         main
+     000080D3  A$main$193                         main
+     000080D4  A$main$195                         main
+     000080D6  A$main$196                         main
+     000080D7  A$main$200                         main
+     000080D7  Smain$micros$9                     main
+     000080D9  A$main$201                         main
+     000080DA  A$main$203                         main
+     000080DC  A$main$208                         main
+     000080DE  A$main$209                         main
+     000080E0  A$main$211                         main
+     000080E2  A$main$219                         main
+     000080E2  Smain$micros$10                    main
+     000080E2  Smain$micros$11                    main
+     000080E6  A$main$220                         main
+     000080E7  A$main$221                         main
+     000080E9  A$main$222                         main
+     000080EA  A$main$224                         main
+     000080EC  A$main$225                         main
+     000080ED  A$main$231                         main
+     000080ED  Smain$micros$12                    main
+     000080EE  A$main$237                         main
+ASxxxx Linker V03.00/V05.40 + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000080EE  Smain$micros$13                    main
+     000080F0  A$main$241                         main
+     000080F0  Smain$micros$14                    main
+     000080F0  Smain$micros$15                    main
+     000080F0  XFmain$micros$0$0                  main
+     000080F1  A$main$271                         main
+     000080F1  Smain$micros$16                    main
+     000080F1  Smain$putchar$17                   main
+     000080F1  Smain$putchar$18                   main
+     000080F1  Smain$putchar$19                   main
+     000080F1  Smain$putchar$20                   main
+     000080F1  _putchar                           main
+     000080F6  A$main$276                         main
+     000080F7  A$main$278                         main
+     000080FA  A$main$290                         main
+     000080FA  Smain$putchar$21                   main
+     000080FA  Smain$putchar$22                   main
+     000080FA  Smain$putchar$23                   main
+     000080FA  Smain$putchar$24                   main
+     000080FA  XG$putchar$0$0                     main
+     000080FB  A$main$302                         main
+     000080FB  Smain$main$26                      main
+     000080FB  Smain$main$27                      main
+     000080FB  Smain$putchar$25                   main
+     000080FB  _main                              main
+     000080FD  A$main$307                         main
+     000080FD  Smain$main$28                      main
+     000080FD  Smain$main$29                      main
+     000080FE  A$main$311                         main
+     000080FE  Smain$main$30                      main
+     00008102  A$main$317                         main
+     00008102  Smain$main$31                      main
+     00008106  A$main$324                         main
+     00008106  Smain$main$32                      main
+     0000810A  A$main$330                         main
+     0000810A  Smain$main$33                      main
+     0000810D  A$main$331                         main
+     0000810F  A$main$332                         main
+     00008112  A$main$337                         main
+     00008112  Smain$main$34                      main
+     00008114  A$main$339                         main
+     00008114  Smain$main$35                      main
+     00008116  A$main$341                         main
+     00008116  Smain$main$36                      main
+     00008117  A$main$342                         main
+     00008118  A$main$345                         main
+     00008118  Smain$main$37                      main
+     0000811B  A$main$350                         main
+     0000811B  Smain$main$38                      main
+     0000811B  Smain$main$39                      main
+     0000811E  A$main$354                         main
+ASxxxx Linker V03.00/V05.40 + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000811E  Smain$main$40                      main
+     0000811F  A$main$364                         main
+     0000811F  Smain$main$41                      main
+     0000811F  Smain$main$42                      main
+     0000811F  Smain$main$43                      main
+     0000811F  Smain$main$44                      main
+     00008122  A$main$365                         main
+     00008125  A$main$366                         main
+     00008127  A$main$367                         main
+     0000812A  A$main$368                         main
+     0000812C  A$main$369                         main
+     0000812D  A$main$375                         main
+     0000812D  Smain$main$45                      main
+     0000812D  Smain$main$46                      main
+     0000812F  A$main$380                         main
+     00008131  A$main$381                         main
+     00008134  A$main$382                         main
+     00008136  A$main$383                         main
+     00008139  A$main$384                         main
+     0000813A  A$main$385                         main
+     0000813D  A$main$386                         main
+     0000813E  A$main$387                         main
+     00008141  A$main$389                         main
+     00008143  A$main$397                         main
+     00008143  Smain$main$47                      main
+     00008143  Smain$main$48                      main
+     00008144  A$main$399                         main
+     00008144  Smain$main$49                      main
+     00008146  A$main$401                         main
+     00008146  Smain$main$50                      main
+     00008149  A$main$402                         main
+     0000814B  A$main$404                         main
+     0000814B  Smain$main$51                      main
+     0000814C  A$main$409                         main
+     0000814C  Smain$main$52                      main
+     0000814C  Smain$main$53                      main
+     0000814E  A$main$412                         main
+     0000814E  Smain$main$54                      main
+     00008150  A$main$421                         main
+     00008150  Smain$main$55                      main
+     00008152  A$main$424                         main
+     00008152  Smain$main$56                      main
+     00008154  A$main$426                         main
+     00008154  Smain$main$57                      main
+     00008156  A$main$429                         main
+     00008156  Smain$main$58                      main
+     00008159  A$main$430                         main
+     0000815B  A$main$437                         main
+     0000815B  Smain$main$59                      main
+     0000815B  Smain$main$60                      main
+     0000815E  A$main$438                         main
+ASxxxx Linker V03.00/V05.40 + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000815F  A$main$440                         main
+     00008160  A$main$441                         main
+     00008161  A$main$442                         main
+     00008163  A$main$444                         main
+     00008165  A$main$446                         main
+     00008166  A$main$447                         main
+     00008167  A$main$448                         main
+     00008169  A$main$449                         main
+     0000816A  A$main$451                         main
+     0000816A  Smain$main$61                      main
+     0000816B  A$main$452                         main
+     0000816D  A$main$453                         main
+     0000816F  A$main$454                         main
+     00008170  A$main$455                         main
+     00008171  A$main$461                         main
+     00008171  Smain$main$62                      main
+     00008171  Smain$main$63                      main
+     00008171  Smain$main$64                      main
+     00008173  A$main$469                         main
+     00008173  Smain$main$65                      main
+     00008173  Smain$main$66                      main
+     00008175  A$main$473                         main
+     00008175  Smain$main$67                      main
+     00008175  Smain$main$68                      main
+     00008175  XG$main$0$0                        main
+     00008176  A$primes$66                        primes
+     00008176  Smain$main$69                      main
+     00008176  Sprimes$_CalcPrimes$0              primes
+     00008176  Sprimes$_CalcPrimes$1              primes
+     00008176  __CalcPrimes                       primes
+     00008178  A$primes$73                        primes
+     00008178  Sprimes$_CalcPrimes$2              primes
+     00008178  Sprimes$_CalcPrimes$3              primes
+     0000817A  A$primes$75                        primes
+     0000817A  Sprimes$_CalcPrimes$4              primes
+     0000817C  A$primes$78                        primes
+     0000817C  Sprimes$_CalcPrimes$5              primes
+     0000817E  A$primes$80                        primes
+     0000817E  Sprimes$_CalcPrimes$6              primes
+     00008180  A$primes$83                        primes
+     00008180  Sprimes$_CalcPrimes$7              primes
+     00008183  A$primes$85                        primes
+     00008186  A$primes$90                        primes
+     00008186  Sprimes$_CalcPrimes$8              primes
+     00008186  Sprimes$_CalcPrimes$9              primes
+     0000818A  A$primes$97                        primes
+     0000818A  Sprimes$_CalcPrimes$10             primes
+     0000818A  Sprimes$_CalcPrimes$11             primes
+     0000818B  A$primes$100                       primes
+     0000818F  A$primes$105                       primes
+     0000818F  Sprimes$_CalcPrimes$12             primes
+ASxxxx Linker V03.00/V05.40 + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000818F  Sprimes$_CalcPrimes$13             primes
+     00008193  A$primes$108                       primes
+     00008197  A$primes$110                       primes
+     00008199  A$primes$117                       primes
+     00008199  Sprimes$_CalcPrimes$14             primes
+     0000819C  A$primes$118                       primes
+     0000819E  A$primes$125                       primes
+     0000819E  Sprimes$_CalcPrimes$15             primes
+     0000819E  Sprimes$_CalcPrimes$16             primes
+     000081A0  A$primes$129                       primes
+     000081A3  A$primes$132                       primes
+     000081A5  A$primes$139                       primes
+     000081A5  Sprimes$_CalcPrimes$17             primes
+     000081A5  Sprimes$_CalcPrimes$18             primes
+     000081A7  A$primes$140                       primes
+     000081A8  A$primes$143                       primes
+     000081A8  Sprimes$_CalcPrimes$19             primes
+     000081AA  A$primes$147                       primes
+     000081AA  Sprimes$_CalcPrimes$20             primes
+     000081AD  A$primes$149                       primes
+     000081AD  Sprimes$_CalcPrimes$21             primes
+     000081AE  A$primes$152                       primes
+     000081AE  Sprimes$_CalcPrimes$22             primes
+     000081B0  A$primes$153                       primes
+     000081B1  A$primes$154                       primes
+     000081B3  A$primes$162                       primes
+     000081B3  Sprimes$_CalcPrimes$23             primes
+     000081B3  Sprimes$_CalcPrimes$24             primes
+     000081B4  A$primes$165                       primes
+     000081B8  A$primes$169                       primes
+     000081B8  Sprimes$_CalcPrimes$25             primes
+     000081BB  A$primes$175                       primes
+     000081BB  Sprimes$_CalcPrimes$26             primes
+     000081BB  Sprimes$_CalcPrimes$27             primes
+     000081BF  A$primes$177                       primes
+     000081C1  A$primes$188                       primes
+     000081C1  Sprimes$_CalcPrimes$28             primes
+     000081C1  Sprimes$_CalcPrimes$29             primes
+     000081C1  Sprimes$_CalcPrimes$30             primes
+     000081C3  A$primes$189                       primes
+     000081C4  A$primes$192                       primes
+     000081C6  A$primes$194                       primes
+     000081C7  A$primes$197                       primes
+     000081C7  Sprimes$_CalcPrimes$31             primes
+     000081C9  A$primes$199                       primes
+     000081CC  A$primes$203                       primes
+     000081CC  Sprimes$_CalcPrimes$32             primes
+     000081CF  A$primes$205                       primes
+     000081D1  A$primes$212                       primes
+     000081D1  Sprimes$_CalcPrimes$33             primes
+     000081D2  A$primes$213                       primes
+ASxxxx Linker V03.00/V05.40 + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000081D5  A$primes$217                       primes
+     000081D5  Sprimes$_CalcPrimes$34             primes
+     000081D9  A$primes$224                       primes
+     000081D9  Sprimes$_CalcPrimes$35             primes
+     000081D9  Sprimes$_CalcPrimes$36             primes
+     000081DA  A$primes$228                       primes
+     000081DD  A$primes$231                       primes
+     000081DF  A$primes$238                       primes
+     000081DF  Sprimes$_CalcPrimes$37             primes
+     000081DF  Sprimes$_CalcPrimes$38             primes
+     000081E2  A$primes$239                       primes
+     000081E3  A$primes$241                       primes
+     000081E6  A$primes$249                       primes
+     000081E6  Sprimes$_CalcPrimes$39             primes
+     000081E6  Sprimes$_CalcPrimes$40             primes
+     000081E6  Sprimes$_CalcPrimes$41             primes
+     000081E8  A$primes$252                       primes
+     000081EC  A$primes$254                       primes
+     000081EE  A$primes$263                       primes
+     000081EE  Sprimes$_CalcPrimes$42             primes
+     000081F0  A$primes$267                       primes
+     000081F0  Sprimes$_CalcPrimes$43             primes
+     000081F0  Sprimes$_CalcPrimes$44             primes
+     000081F0  XG$_CalcPrimes$0$0                 primes
+     000081F1  A$timer4$62                        timer4
+     000081F1  Sprimes$_CalcPrimes$45             primes
+     000081F1  Stimer4$micros$0                   timer4
+     000081F1  Stimer4$micros$1                   timer4
+     000081F3  A$timer4$69                        timer4
+     000081F3  Stimer4$micros$2                   timer4
+     000081F3  Stimer4$micros$3                   timer4
+     000081F7  A$timer4$74                        timer4
+     000081F7  Stimer4$micros$4                   timer4
+     000081FA  A$timer4$75                        timer4
+     000081FC  A$timer4$79                        timer4
+     000081FC  Stimer4$micros$5                   timer4
+     000081FF  A$timer4$82                        timer4
+     00008201  A$timer4$88                        timer4
+     00008201  Stimer4$micros$6                   timer4
+     00008205  A$timer4$93                        timer4
+     00008205  Stimer4$micros$7                   timer4
+     00008209  A$timer4$94                        timer4
+     0000820C  A$timer4$95                        timer4
+     0000820E  A$timer4$100                       timer4
+     0000820E  Stimer4$micros$8                   timer4
+     0000820F  A$timer4$101                       timer4
+     00008211  A$timer4$102                       timer4
+     00008212  A$timer4$104                       timer4
+     00008213  A$timer4$105                       timer4
+     00008214  A$timer4$108                       timer4
+     00008216  A$timer4$109                       timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008217  A$timer4$111                       timer4
+     0000821A  A$timer4$112                       timer4
+     0000821B  A$timer4$113                       timer4
+     0000821D  A$timer4$114                       timer4
+     0000821E  A$timer4$116                       timer4
+     00008220  A$timer4$117                       timer4
+     00008221  A$timer4$121                       timer4
+     00008221  Stimer4$micros$9                   timer4
+     00008223  A$timer4$122                       timer4
+     00008224  A$timer4$124                       timer4
+     00008226  A$timer4$129                       timer4
+     00008228  A$timer4$130                       timer4
+     0000822A  A$timer4$132                       timer4
+     0000822C  A$timer4$140                       timer4
+     0000822C  Stimer4$micros$10                  timer4
+     0000822C  Stimer4$micros$11                  timer4
+     00008230  A$timer4$141                       timer4
+     00008231  A$timer4$142                       timer4
+     00008233  A$timer4$143                       timer4
+     00008234  A$timer4$145                       timer4
+     00008236  A$timer4$146                       timer4
+     00008237  A$timer4$152                       timer4
+     00008237  Stimer4$micros$12                  timer4
+     00008238  A$timer4$158                       timer4
+     00008238  Stimer4$micros$13                  timer4
+     0000823A  A$timer4$162                       timer4
+     0000823A  Stimer4$micros$14                  timer4
+     0000823A  Stimer4$micros$15                  timer4
+     0000823A  XFtimer4$micros$0$0                timer4
+     0000823B  A$timer4$179                       timer4
+     0000823B  Stimer4$TIM4_init$17               timer4
+     0000823B  Stimer4$TIM4_init$18               timer4
+     0000823B  Stimer4$TIM4_init$19               timer4
+     0000823B  Stimer4$micros$16                  timer4
+     0000823B  _TIM4_init                         timer4
+     0000823F  A$timer4$184                       timer4
+     0000823F  Stimer4$TIM4_init$20               timer4
+     00008243  A$timer4$188                       timer4
+     00008243  Stimer4$TIM4_init$21               timer4
+     00008244  A$timer4$189                       timer4
+     00008247  A$timer4$190                       timer4
+     0000824A  A$timer4$194                       timer4
+     0000824A  Stimer4$TIM4_init$22               timer4
+     0000824B  A$timer4$195                       timer4
+     0000824E  A$timer4$196                       timer4
+     00008251  A$timer4$200                       timer4
+     00008251  Stimer4$TIM4_init$23               timer4
+     00008255  A$timer4$206                       timer4
+     00008255  Stimer4$TIM4_init$24               timer4
+     00008259  A$timer4$211                       timer4
+     00008259  Stimer4$TIM4_init$25               timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000825D  A$timer4$216                       timer4
+     0000825D  Stimer4$TIM4_init$26               timer4
+     00008260  A$timer4$217                       timer4
+     00008262  A$timer4$218                       timer4
+     00008264  A$timer4$219                       timer4
+     00008267  A$timer4$224                       timer4
+     00008267  Stimer4$TIM4_init$27               timer4
+     0000826B  A$timer4$230                       timer4
+     0000826B  Stimer4$TIM4_init$28               timer4
+     0000826F  A$timer4$237                       timer4
+     0000826F  Stimer4$TIM4_init$29               timer4
+     00008273  A$timer4$246                       timer4
+     00008273  Stimer4$TIM4_init$30               timer4
+     00008273  Stimer4$TIM4_init$31               timer4
+     00008273  XG$TIM4_init$0$0                   timer4
+     00008274  A$timer4$258                       timer4
+     00008274  Stimer4$TIM4_init$32               timer4
+     00008274  Stimer4$delay$33                   timer4
+     00008274  Stimer4$delay$34                   timer4
+     00008274  _delay                             timer4
+     00008276  A$timer4$265                       timer4
+     00008276  Stimer4$delay$35                   timer4
+     00008276  Stimer4$delay$36                   timer4
+     0000827A  A$timer4$268                       timer4
+     0000827D  A$timer4$269                       timer4
+     0000827F  A$timer4$271                       timer4
+     00008282  A$timer4$274                       timer4
+     00008284  A$timer4$278                       timer4
+     00008288  A$timer4$281                       timer4
+     0000828C  A$timer4$282                       timer4
+     0000828F  A$timer4$283                       timer4
+     00008291  A$timer4$286                       timer4
+     00008292  A$timer4$287                       timer4
+     00008294  A$timer4$288                       timer4
+     00008295  A$timer4$290                       timer4
+     00008296  A$timer4$291                       timer4
+     00008297  A$timer4$294                       timer4
+     00008299  A$timer4$295                       timer4
+     0000829A  A$timer4$297                       timer4
+     0000829D  A$timer4$298                       timer4
+     0000829E  A$timer4$299                       timer4
+     000082A0  A$timer4$300                       timer4
+     000082A1  A$timer4$302                       timer4
+     000082A3  A$timer4$303                       timer4
+     000082A4  A$timer4$305                       timer4
+     000082A6  A$timer4$306                       timer4
+     000082A7  A$timer4$308                       timer4
+     000082A9  A$timer4$313                       timer4
+     000082AB  A$timer4$314                       timer4
+     000082AD  A$timer4$316                       timer4
+     000082AF  A$timer4$322                       timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000082AF  Stimer4$delay$37                   timer4
+     000082B3  A$timer4$323                       timer4
+     000082B4  A$timer4$324                       timer4
+     000082B6  A$timer4$325                       timer4
+     000082B7  A$timer4$327                       timer4
+     000082B9  A$timer4$328                       timer4
+     000082BA  A$timer4$334                       timer4
+     000082BA  Stimer4$delay$38                   timer4
+     000082BC  A$timer4$335                       timer4
+     000082BE  A$timer4$340                       timer4
+     000082BE  Stimer4$delay$39                   timer4
+     000082BE  Stimer4$delay$40                   timer4
+     000082C0  A$timer4$341                       timer4
+     000082C1  A$timer4$343                       timer4
+     000082C1  Stimer4$delay$41                   timer4
+     000082C3  A$timer4$344                       timer4
+     000082C4  A$timer4$347                       timer4
+     000082C4  Stimer4$delay$42                   timer4
+     000082C6  A$timer4$349                       timer4
+     000082C6  Stimer4$delay$43                   timer4
+     000082C8  A$timer4$351                       timer4
+     000082C8  Stimer4$delay$44                   timer4
+     000082C9  A$timer4$352                       timer4
+     000082CA  A$timer4$355                       timer4
+     000082CA  Stimer4$delay$45                   timer4
+     000082CD  A$timer4$356                       timer4
+     000082CF  A$timer4$359                       timer4
+     000082CF  Stimer4$delay$46                   timer4
+     000082D1  A$timer4$360                       timer4
+     000082D3  A$timer4$370                       timer4
+     000082D3  Stimer4$delay$47                   timer4
+     000082D3  Stimer4$delay$48                   timer4
+     000082D7  A$timer4$374                       timer4
+     000082DA  A$timer4$375                       timer4
+     000082DC  A$timer4$378                       timer4
+     000082DF  A$timer4$381                       timer4
+     000082E1  A$timer4$386                       timer4
+     000082E5  A$timer4$390                       timer4
+     000082E8  A$timer4$391                       timer4
+     000082EA  A$timer4$392                       timer4
+     000082ED  A$timer4$393                       timer4
+     000082EF  A$timer4$397                       timer4
+     000082F0  A$timer4$398                       timer4
+     000082F2  A$timer4$399                       timer4
+     000082F3  A$timer4$401                       timer4
+     000082F4  A$timer4$402                       timer4
+     000082F5  A$timer4$405                       timer4
+     000082F6  A$timer4$406                       timer4
+     000082F8  A$timer4$408                       timer4
+     000082FB  A$timer4$409                       timer4
+     000082FD  A$timer4$410                       timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000082FF  A$timer4$411                       timer4
+     00008301  A$timer4$412                       timer4
+     00008302  A$timer4$413                       timer4
+     00008304  A$timer4$414                       timer4
+     00008306  A$timer4$417                       timer4
+     00008308  A$timer4$419                       timer4
+     0000830A  A$timer4$424                       timer4
+     0000830C  A$timer4$425                       timer4
+     0000830E  A$timer4$427                       timer4
+     00008310  A$timer4$434                       timer4
+     00008310  Stimer4$delay$49                   timer4
+     00008312  A$timer4$435                       timer4
+     00008315  A$timer4$436                       timer4
+     00008317  A$timer4$437                       timer4
+     00008319  A$timer4$438                       timer4
+     0000831B  A$timer4$439                       timer4
+     0000831D  A$timer4$440                       timer4
+     0000831F  A$timer4$441                       timer4
+     00008321  A$timer4$442                       timer4
+     00008323  A$timer4$450                       timer4
+     00008323  Stimer4$delay$50                   timer4
+     00008323  Stimer4$delay$51                   timer4
+     00008325  A$timer4$451                       timer4
+     00008328  A$timer4$452                       timer4
+     0000832A  A$timer4$453                       timer4
+     0000832C  A$timer4$454                       timer4
+     0000832D  A$timer4$456                       timer4
+     0000832D  Stimer4$delay$52                   timer4
+     0000832F  A$timer4$457                       timer4
+     00008331  A$timer4$458                       timer4
+     00008333  A$timer4$464                       timer4
+     00008333  Stimer4$delay$53                   timer4
+     00008333  Stimer4$delay$54                   timer4
+     00008335  A$timer4$465                       timer4
+     00008336  A$timer4$467                       timer4
+     00008336  Stimer4$delay$55                   timer4
+     00008338  A$timer4$468                       timer4
+     0000833A  A$timer4$469                       timer4
+     0000833C  A$timer4$471                       timer4
+     0000833E  A$timer4$479                       timer4
+     0000833E  Stimer4$delay$56                   timer4
+     0000833E  Stimer4$delay$57                   timer4
+     0000833F  A$timer4$481                       timer4
+     00008341  A$timer4$488                       timer4
+     00008341  Stimer4$delay$58                   timer4
+     00008343  A$timer4$489                       timer4
+     00008345  A$timer4$491                       timer4
+     00008345  Stimer4$delay$59                   timer4
+     00008346  A$timer4$503                       timer4
+     00008346  Stimer4$delay$60                   timer4
+     00008346  Stimer4$delayMicroseconds$61       timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008346  Stimer4$delayMicroseconds$62       timer4
+     00008346  _delayMicroseconds                 timer4
+     00008348  A$timer4$510                       timer4
+     00008348  Stimer4$delayMicroseconds$63       timer4
+     00008348  Stimer4$delayMicroseconds$64       timer4
+     0000834C  A$timer4$513                       timer4
+     0000834F  A$timer4$514                       timer4
+     00008351  A$timer4$516                       timer4
+     00008354  A$timer4$519                       timer4
+     00008356  A$timer4$523                       timer4
+     0000835A  A$timer4$526                       timer4
+     0000835E  A$timer4$527                       timer4
+     00008361  A$timer4$528                       timer4
+     00008363  A$timer4$531                       timer4
+     00008364  A$timer4$532                       timer4
+     00008366  A$timer4$533                       timer4
+     00008367  A$timer4$535                       timer4
+     00008368  A$timer4$536                       timer4
+     00008369  A$timer4$539                       timer4
+     0000836B  A$timer4$540                       timer4
+     0000836C  A$timer4$542                       timer4
+     0000836F  A$timer4$543                       timer4
+     00008370  A$timer4$544                       timer4
+     00008372  A$timer4$545                       timer4
+     00008373  A$timer4$547                       timer4
+     00008375  A$timer4$548                       timer4
+     00008376  A$timer4$550                       timer4
+     00008378  A$timer4$551                       timer4
+     00008379  A$timer4$553                       timer4
+     0000837B  A$timer4$558                       timer4
+     0000837D  A$timer4$559                       timer4
+     0000837F  A$timer4$561                       timer4
+     00008381  A$timer4$567                       timer4
+     00008381  Stimer4$delayMicroseconds$65       timer4
+     00008385  A$timer4$568                       timer4
+     00008386  A$timer4$569                       timer4
+     00008388  A$timer4$570                       timer4
+     00008389  A$timer4$572                       timer4
+     0000838B  A$timer4$573                       timer4
+     0000838C  A$timer4$579                       timer4
+     0000838C  Stimer4$delayMicroseconds$66       timer4
+     0000838E  A$timer4$580                       timer4
+     00008390  A$timer4$591                       timer4
+     00008390  Stimer4$delayMicroseconds$67       timer4
+     00008390  Stimer4$delayMicroseconds$68       timer4
+     00008390  Stimer4$delayMicroseconds$69       timer4
+     00008394  A$timer4$595                       timer4
+     00008397  A$timer4$596                       timer4
+     00008399  A$timer4$599                       timer4
+     0000839C  A$timer4$602                       timer4
+     0000839E  A$timer4$607                       timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000083A2  A$timer4$611                       timer4
+     000083A5  A$timer4$612                       timer4
+     000083A7  A$timer4$613                       timer4
+     000083AA  A$timer4$614                       timer4
+     000083AC  A$timer4$618                       timer4
+     000083AD  A$timer4$619                       timer4
+     000083AF  A$timer4$620                       timer4
+     000083B0  A$timer4$622                       timer4
+     000083B1  A$timer4$623                       timer4
+     000083B2  A$timer4$626                       timer4
+     000083B3  A$timer4$627                       timer4
+     000083B5  A$timer4$629                       timer4
+     000083B8  A$timer4$630                       timer4
+     000083BA  A$timer4$631                       timer4
+     000083BC  A$timer4$632                       timer4
+     000083BE  A$timer4$633                       timer4
+     000083BF  A$timer4$634                       timer4
+     000083C1  A$timer4$635                       timer4
+     000083C3  A$timer4$638                       timer4
+     000083C5  A$timer4$640                       timer4
+     000083C7  A$timer4$645                       timer4
+     000083C9  A$timer4$646                       timer4
+     000083CB  A$timer4$648                       timer4
+     000083CD  A$timer4$655                       timer4
+     000083CD  Stimer4$delayMicroseconds$70       timer4
+     000083CF  A$timer4$656                       timer4
+     000083D2  A$timer4$657                       timer4
+     000083D4  A$timer4$658                       timer4
+     000083D6  A$timer4$659                       timer4
+     000083D8  A$timer4$660                       timer4
+     000083DA  A$timer4$661                       timer4
+     000083DC  A$timer4$662                       timer4
+     000083DE  A$timer4$663                       timer4
+     000083E0  A$timer4$671                       timer4
+     000083E0  Stimer4$delayMicroseconds$71       timer4
+     000083E0  Stimer4$delayMicroseconds$72       timer4
+     000083E2  A$timer4$672                       timer4
+     000083E5  A$timer4$673                       timer4
+     000083E7  A$timer4$674                       timer4
+     000083E9  A$timer4$675                       timer4
+     000083EA  A$timer4$677                       timer4
+     000083EA  Stimer4$delayMicroseconds$73       timer4
+     000083EC  A$timer4$678                       timer4
+     000083EE  A$timer4$679                       timer4
+     000083F0  A$timer4$685                       timer4
+     000083F0  Stimer4$delayMicroseconds$74       timer4
+     000083F0  Stimer4$delayMicroseconds$75       timer4
+     000083F2  A$timer4$686                       timer4
+     000083F3  A$timer4$688                       timer4
+     000083F3  Stimer4$delayMicroseconds$76       timer4
+     000083F5  A$timer4$689                       timer4
+ASxxxx Linker V03.00/V05.40 + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000083F7  A$timer4$690                       timer4
+     000083F9  A$timer4$692                       timer4
+     000083FB  A$timer4$700                       timer4
+     000083FB  Stimer4$delayMicroseconds$77       timer4
+     000083FB  Stimer4$delayMicroseconds$78       timer4
+     000083FC  A$timer4$702                       timer4
+     000083FE  A$timer4$709                       timer4
+     000083FE  Stimer4$delayMicroseconds$79       timer4
+     00008400  A$timer4$710                       timer4
+     00008402  A$timer4$712                       timer4
+     00008402  Stimer4$delayMicroseconds$80       timer4
+     00008403  A$timer4$729                       timer4
+     00008403  Stimer4$TIM4_UPD_ISR$82            timer4
+     00008403  Stimer4$TIM4_UPD_ISR$83            timer4
+     00008403  Stimer4$TIM4_UPD_ISR$84            timer4
+     00008403  Stimer4$delayMicroseconds$81       timer4
+     00008403  _TIM4_UPD_ISR                      timer4
+     00008407  A$timer4$734                       timer4
+     00008407  Stimer4$TIM4_UPD_ISR$85            timer4
+     0000840A  A$timer4$735                       timer4
+     0000840D  A$timer4$736                       timer4
+     00008411  A$timer4$737                       timer4
+     00008413  A$timer4$738                       timer4
+     00008415  A$timer4$741                       timer4
+     00008418  A$timer4$742                       timer4
+     0000841C  A$timer4$746                       timer4
+     0000841C  Stimer4$TIM4_UPD_ISR$86            timer4
+     0000841F  A$timer4$747                       timer4
+     00008423  A$timer4$749                       timer4
+     00008424  A$timer4$750                       timer4
+     00008426  A$timer4$751                       timer4
+     00008428  A$timer4$754                       timer4
+     0000842B  A$timer4$755                       timer4
+     0000842F  A$timer4$759                       timer4
+     0000842F  Stimer4$TIM4_UPD_ISR$87            timer4
+     00008433  A$timer4$770                       timer4
+     00008433  Stimer4$TIM4_UPD_ISR$88            timer4
+     00008433  Stimer4$TIM4_UPD_ISR$89            timer4
+     00008433  Stimer4$TIM4_UPD_ISR$90            timer4
+     00008433  XG$TIM4_UPD_ISR$0$0                timer4
+     00008434  A$uart$59                          uart
+     00008434  Stimer4$TIM4_UPD_ISR$91            timer4
+     00008434  Suart$UART_begin$0                 uart
+     00008434  Suart$UART_begin$1                 uart
+     00008434  _UART_begin                        uart
+     00008435  A$uart$64                          uart
+     00008435  Suart$UART_begin$2                 uart
+     00008435  Suart$UART_begin$3                 uart
+     00008439  A$uart$68                          uart
+     00008439  Suart$UART_begin$4                 uart
+     0000843D  A$uart$72                          uart
+ASxxxx Linker V03.00/V05.40 + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000843D  Suart$UART_begin$5                 uart
+     00008441  A$uart$76                          uart
+     00008441  Suart$UART_begin$6                 uart
+     00008443  A$uart$77                          uart
+     00008444  A$uart$79                          uart
+     00008444  Suart$UART_begin$7                 uart
+     00008446  A$uart$80                          uart
+     00008447  A$uart$83                          uart
+     00008447  Suart$UART_begin$8                 uart
+     00008449  A$uart$85                          uart
+     00008449  Suart$UART_begin$9                 uart
+     0000844B  A$uart$87                          uart
+     0000844B  Suart$UART_begin$10                uart
+     0000844D  A$uart$89                          uart
+     0000844D  Suart$UART_begin$11                uart
+     0000844F  A$uart$92                          uart
+     0000844F  Suart$UART_begin$12                uart
+     00008452  A$uart$93                          uart
+     00008454  A$uart$102                         uart
+     00008454  Suart$UART_begin$13                uart
+     00008454  Suart$UART_begin$14                uart
+     00008456  A$uart$104                         uart
+     00008458  A$uart$105                         uart
+     00008459  A$uart$106                         uart
+     0000845B  A$uart$108                         uart
+     0000845D  A$uart$111                         uart
+     0000845F  A$uart$113                         uart
+     00008461  A$uart$115                         uart
+     00008463  A$uart$117                         uart
+     00008466  A$uart$121                         uart
+     00008466  Suart$UART_begin$15                uart
+     00008467  A$uart$122                         uart
+     00008469  A$uart$123                         uart
+     0000846A  A$uart$125                         uart
+     0000846C  A$uart$126                         uart
+     0000846D  A$uart$128                         uart
+     0000846F  A$uart$129                         uart
+     00008470  A$uart$132                         uart
+     00008471  A$uart$134                         uart
+     00008474  A$uart$140                         uart
+     00008474  Suart$UART_begin$16                uart
+     00008478  A$uart$146                         uart
+     00008478  Suart$UART_begin$17                uart
+     0000847B  A$uart$147                         uart
+     0000847D  A$uart$148                         uart
+     00008480  A$uart$155                         uart
+     00008480  Suart$UART_begin$18                uart
+     00008482  A$uart$156                         uart
+     00008484  A$uart$158                         uart
+     00008484  Suart$UART_begin$19                uart
+     00008485  Suart$UART_begin$20                uart
+ASxxxx Linker V03.00/V05.40 + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                000080A7    00000B33 =        2867. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008485  __mulint                           
+     000084A2  __divulong                         _divulong
+     000084FB  _memset                            _memset
+     0000851D  ___sdcc_external_startup           _startup
+     00008524  _vprintf                           vprintf
+     00008537  _printf                            vprintf
+     00008548  __mullong                          
+     00008653  __print_format                     printf_large
+     00008BCC  _strlen                            _strlen
+
+ASxxxx Linker V03.00/V05.40 + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.debug_line                         00000000    000006D1 =        1745. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.debug_loc                          00000000    00000338 =         824. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.debug_abbrev                       00000000    000001D2 =         466. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.debug_info                         00000000    00000627 =        1575. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 27.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.debug_pubnames                     00000000    000000FF =         255. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 28.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.debug_frame                        00000000    00000384 =         900. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00/V05.40 + sdld,  page 29.
+
+Files Linked                              [ module(s) ]
+
+bin/main.rel                              [ main ]
+bin/primes.rel                            [ primes ]
+bin/timer4.rel                            [ timer4 ]
+bin/uart.rel                              [ uart ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _mulint.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _divulong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _memset.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _startup.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ vprintf.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _mullong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ printf_large.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _strlen.rel ]
+
+ASxxxx Linker V03.00/V05.40 + sdld,  page 30.
+
+User Base Address Definitions
+
+HOME = 0x8000
+DATA = 0x0001
+
+

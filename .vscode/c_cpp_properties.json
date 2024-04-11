@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "STM8",
+            "includePath": [
+                "${workspaceFolder}/**",
+                /*"C:/Program Files/SDCC/include/**",*/
+                "/usr/share/sdcc/include/**"
+            ],
+            "defines": [
+                "STM8S103",
+                "USE_STDPERIPH_DRIVER",
+                "SDCC",
+                "__SDCC",
+                "__SDCC_stm8",
+                "__stm8",
+                "__interrupt(n)="
+            ],
+            /*"compilerPath": "C:/ProgramData/chocolatey/bin/gcc.exe",*/
+            "compilerPath": "/usr/bin/sdcc",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+            //"compileCommands": "${workspaceFolder}/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

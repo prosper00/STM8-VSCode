@@ -1,0 +1,825 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler 
+                                      3 ; Version 4.4.0 #14620 (Linux)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module primes
+                                      6 	.optsdcc -mstm8
+                                      7 	
+                                      8 ;--------------------------------------------------------
+                                      9 ; Public variables in this module
+                                     10 ;--------------------------------------------------------
+                                     11 	.globl _memset
+                                     12 	.globl __CalcPrimes
+                                     13 ;--------------------------------------------------------
+                                     14 ; ram data
+                                     15 ;--------------------------------------------------------
+                                     16 	.area DATA
+                           000000    17 Fprimes$aIsPrime$0_0$0==.
+      000000                         18 _aIsPrime:
+      000000                         19 	.ds 990
+                           0003DE    20 Fprimes$NumPrimes$0_0$0==.
+      0003DE                         21 _NumPrimes:
+      0003DE                         22 	.ds 2
+                                     23 ;--------------------------------------------------------
+                                     24 ; ram data
+                                     25 ;--------------------------------------------------------
+                                     26 	.area INITIALIZED
+                                     27 ;--------------------------------------------------------
+                                     28 ; absolute external ram data
+                                     29 ;--------------------------------------------------------
+                                     30 	.area DABS (ABS)
+                                     31 
+                                     32 ; default segment ordering for linker
+                                     33 	.area HOME
+                                     34 	.area GSINIT
+                                     35 	.area GSFINAL
+                                     36 	.area CONST
+                                     37 	.area INITIALIZER
+                                     38 	.area CODE
+                                     39 
+                                     40 ;--------------------------------------------------------
+                                     41 ; global & static initialisations
+                                     42 ;--------------------------------------------------------
+                                     43 	.area HOME
+                                     44 	.area GSINIT
+                                     45 	.area GSFINAL
+                                     46 	.area GSINIT
+                                     47 ;--------------------------------------------------------
+                                     48 ; Home
+                                     49 ;--------------------------------------------------------
+                                     50 	.area HOME
+                                     51 	.area HOME
+                                     52 ;--------------------------------------------------------
+                                     53 ; code
+                                     54 ;--------------------------------------------------------
+                                     55 	.area CODE
+                           000000    56 	Sprimes$_CalcPrimes$0 ==.
+                                     57 ;	primes.c: 25: void _CalcPrimes(void) {
+                                     58 ; genLabel
+                                     59 ;	-----------------------------------------
+                                     60 ;	 function _CalcPrimes
+                                     61 ;	-----------------------------------------
+                                     62 ;	Register assignment might be sub-optimal.
+                                     63 ;	Stack space usage: 4 bytes.
+      000000                         64 __CalcPrimes:
+                           000000    65 	Sprimes$_CalcPrimes$1 ==.
+      000000 52 04            [ 2]   66 	sub	sp, #4
+                           000002    67 	Sprimes$_CalcPrimes$2 ==.
+                           000002    68 	Sprimes$_CalcPrimes$3 ==.
+                                     69 ;	primes.c: 32: memset(aIsPrime, 1, sizeof(aIsPrime));
+                                     70 ; skipping iCode since result will be rematerialized
+                                     71 ; skipping iCode since result will be rematerialized
+                                     72 ; genIPush
+      000002 4B DE            [ 1]   73 	push	#0xde
+                           000004    74 	Sprimes$_CalcPrimes$4 ==.
+      000004 4B 03            [ 1]   75 	push	#0x03
+                           000006    76 	Sprimes$_CalcPrimes$5 ==.
+                                     77 ; genIPush
+      000006 4B 01            [ 1]   78 	push	#0x01
+                           000008    79 	Sprimes$_CalcPrimes$6 ==.
+      000008 4B 00            [ 1]   80 	push	#0x00
+                           00000A    81 	Sprimes$_CalcPrimes$7 ==.
+                                     82 ; genSend
+      00000A AEr00r00         [ 2]   83 	ldw	x, #(_aIsPrime+0)
+                                     84 ; genCall
+      00000D CDr00r00         [ 4]   85 	call	_memset
+                           000010    86 	Sprimes$_CalcPrimes$8 ==.
+                           000010    87 	Sprimes$_CalcPrimes$9 ==.
+                                     88 ;	primes.c: 36: for (i = 4; i < 1000; i += 2) {
+                                     89 ; genAssign
+      000010 90 AE 00 04      [ 2]   90 	ldw	y, #0x0004
+                                     91 ; genLabel
+      000014                         92 00111$:
+                           000014    93 	Sprimes$_CalcPrimes$10 ==.
+                           000014    94 	Sprimes$_CalcPrimes$11 ==.
+                                     95 ;	primes.c: 37: aIsPrime[i] = 0; // Cross it out: not a prime
+                                     96 ; genPlus
+      000014 93               [ 1]   97 	ldw	x, y
+                                     98 ; genPointerSet
+                                     99 ; peephole 9a moved addition of offset into clear instruction
+      000015 72 4Fu00u00      [ 1]  100 	clr	((_aIsPrime+0), x)
+                           000019   101 	Sprimes$_CalcPrimes$12 ==.
+                           000019   102 	Sprimes$_CalcPrimes$13 ==.
+                                    103 ;	primes.c: 36: for (i = 4; i < 1000; i += 2) {
+                                    104 ; genPlus
+      000019 72 A9 00 02      [ 2]  105 	addw	y, #0x0002
+                                    106 ; genCmp
+                                    107 ; genCmpTnz
+      00001D 90 A3 03 E8      [ 2]  108 	cpw	y, #0x03e8
+                                    109 ; peephole j5 changed absolute to relative unconditional jump.
+      000021 25 F1            [ 1]  110 	jrc	00111$
+                                    111 ; peephole j9 removed jra by using inverse jump logic
+                                    112 ; peephole j30 removed unused label 00178$.
+                                    113 ; skipping generated iCode
+                           000023   114 	Sprimes$_CalcPrimes$14 ==.
+                                    115 ;	primes.c: 43: for (i = 3; i * i < sizeof(aIsPrime); i++) {
+                                    116 ; genAssign
+      000023 AE 00 03         [ 2]  117 	ldw	x, #0x0003
+      000026 1F 03            [ 2]  118 	ldw	(0x03, sp), x
+                                    119 ; genLabel
+      000028                        120 00113$:
+                           000028   121 	Sprimes$_CalcPrimes$15 ==.
+                           000028   122 	Sprimes$_CalcPrimes$16 ==.
+                                    123 ;	primes.c: 44: if (aIsPrime[i]) {
+                                    124 ; genPlus
+      000028 1E 03            [ 2]  125 	ldw	x, (0x03, sp)
+                                    126 ; genPointerGet
+                                    127 ; peephole 10b moved addition of offset into storage instruction
+                                    128 ; genIfx
+      00002A D6u00u00         [ 1]  129 	ld	a, (_aIsPrime+0, x)
+                                    130 ; peephole 30 removed redundant tnz.
+                                    131 ; peephole j5 changed absolute to relative unconditional jump.
+      00002D 27 1C            [ 1]  132 	jreq	00114$
+                                    133 ; peephole j10 removed jra by using inverse jump logic
+                                    134 ; peephole j30 removed unused label 00179$.
+                           00002F   135 	Sprimes$_CalcPrimes$17 ==.
+                           00002F   136 	Sprimes$_CalcPrimes$18 ==.
+                                    137 ;	primes.c: 45: j = i * i; // The square of this prime is the first we need to cross out
+                                    138 ; genIPush
+      00002F 1E 03            [ 2]  139 	ldw	x, (0x03, sp)
+      000031 89               [ 2]  140 	pushw	x
+                           000032   141 	Sprimes$_CalcPrimes$19 ==.
+                                    142 ; genSend
+      000032 1E 05            [ 2]  143 	ldw	x, (0x05, sp)
+                           000034   144 	Sprimes$_CalcPrimes$20 ==.
+                                    145 ;	primes.c: 46: do {
+                                    146 ; genCall
+      000034 CDr00r00         [ 4]  147 	call	__mulint
+                           000037   148 	Sprimes$_CalcPrimes$21 ==.
+      000037 51               [ 1]  149 	exgw	x, y
+                           000038   150 	Sprimes$_CalcPrimes$22 ==.
+                                    151 ; genLeftShiftLiteral
+      000038 1E 03            [ 2]  152 	ldw	x, (0x03, sp)
+      00003A 58               [ 2]  153 	sllw	x
+      00003B 1F 01            [ 2]  154 	ldw	(0x01, sp), x
+                           00003D   155 	Sprimes$_CalcPrimes$23 ==.
+                           00003D   156 	Sprimes$_CalcPrimes$23 ==.
+                                    157 ; genLabel
+      00003D                        158 00102$:
+                           00003D   159 	Sprimes$_CalcPrimes$24 ==.
+                                    160 ;	primes.c: 47: aIsPrime[j] = 0; // Cross it out: not a prime
+                                    161 ; genPlus
+      00003D 93               [ 1]  162 	ldw	x, y
+                                    163 ; genPointerSet
+                                    164 ; peephole 9a moved addition of offset into clear instruction
+      00003E 72 4Fu00u00      [ 1]  165 	clr	((_aIsPrime+0), x)
+                           000042   166 	Sprimes$_CalcPrimes$25 ==.
+                                    167 ;	primes.c: 48: j += 2 * i;      // Skip even multiples (only 3*, 5*, 7* etc)
+                                    168 ; genPlus
+      000042 72 F9 01         [ 2]  169 	addw	y, (0x01, sp)
+                           000045   170 	Sprimes$_CalcPrimes$26 ==.
+                           000045   171 	Sprimes$_CalcPrimes$27 ==.
+                                    172 ;	primes.c: 49: } while (j < sizeof(aIsPrime));
+                                    173 ; genCmp
+                                    174 ; genCmpTnz
+      000045 90 A3 03 DE      [ 2]  175 	cpw	y, #0x03de
+                                    176 ; peephole j5 changed absolute to relative unconditional jump.
+      000049 25 F2            [ 1]  177 	jrc	00102$
+                                    178 ; peephole j9 removed jra by using inverse jump logic
+                                    179 ; peephole j30 removed unused label 00180$.
+                                    180 ; skipping generated iCode
+                           00004B   181 	Sprimes$_CalcPrimes$28 ==.
+                                    182 ; genLabel
+      00004B                        183 00114$:
+                           00004B   184 	Sprimes$_CalcPrimes$29 ==.
+                           00004B   185 	Sprimes$_CalcPrimes$30 ==.
+                                    186 ;	primes.c: 43: for (i = 3; i * i < sizeof(aIsPrime); i++) {
+                                    187 ; genPlus
+      00004B 1E 03            [ 2]  188 	ldw	x, (0x03, sp)
+      00004D 5C               [ 1]  189 	incw	x
+                                    190 ; peephole j30 removed unused label 00181$.
+                                    191 ; genIPush
+      00004E 1F 03            [ 2]  192 	ldw	(0x03, sp), x
+                                    193 ; peephole 4w removed redundant load from (0x03, sp) into x.
+      000050 89               [ 2]  194 	pushw	x
+                           000051   195 	Sprimes$_CalcPrimes$31 ==.
+                                    196 ; genSend
+      000051 1E 05            [ 2]  197 	ldw	x, (0x05, sp)
+                                    198 ; genCall
+      000053 CDr00r00         [ 4]  199 	call	__mulint
+                           000056   200 	Sprimes$_CalcPrimes$32 ==.
+                                    201 ; genCmp
+                                    202 ; genCmpTnz
+      000056 A3 03 DE         [ 2]  203 	cpw	x, #0x03de
+                                    204 ; peephole j5 changed absolute to relative unconditional jump.
+      000059 25 CD            [ 1]  205 	jrc	00113$
+                                    206 ; peephole j9 removed jra by using inverse jump logic
+                                    207 ; peephole j30 removed unused label 00182$.
+                                    208 ; skipping generated iCode
+                           00005B   209 	Sprimes$_CalcPrimes$33 ==.
+                                    210 ;	primes.c: 55: NumPrimes = 0;
+                                    211 ; genAssign
+      00005B 5F               [ 1]  212 	clrw	x
+      00005C CFu03uDE         [ 2]  213 	ldw	_NumPrimes+0, x
+                           00005F   214 	Sprimes$_CalcPrimes$34 ==.
+                                    215 ;	primes.c: 56: for (i = 2; i < sizeof(aIsPrime); i++) {
+                                    216 ; genAssign
+      00005F 90 AE 00 02      [ 2]  217 	ldw	y, #0x0002
+                                    218 ; genLabel
+      000063                        219 00115$:
+                           000063   220 	Sprimes$_CalcPrimes$35 ==.
+                           000063   221 	Sprimes$_CalcPrimes$36 ==.
+                                    222 ;	primes.c: 57: if (aIsPrime[i]) {
+                                    223 ; genPlus
+      000063 93               [ 1]  224 	ldw	x, y
+                                    225 ; genPointerGet
+                                    226 ; peephole 10b moved addition of offset into storage instruction
+                                    227 ; genIfx
+      000064 D6u00u00         [ 1]  228 	ld	a, (_aIsPrime+0, x)
+                                    229 ; peephole 30 removed redundant tnz.
+                                    230 ; peephole j5 changed absolute to relative unconditional jump.
+      000067 27 07            [ 1]  231 	jreq	00116$
+                                    232 ; peephole j10 removed jra by using inverse jump logic
+                                    233 ; peephole j30 removed unused label 00183$.
+                           000069   234 	Sprimes$_CalcPrimes$37 ==.
+                           000069   235 	Sprimes$_CalcPrimes$38 ==.
+                                    236 ;	primes.c: 58: NumPrimes++;
+                                    237 ; genPlus
+      000069 CEu03uDE         [ 2]  238 	ldw	x, _NumPrimes+0
+      00006C 5C               [ 1]  239 	incw	x
+                                    240 ; genAssign
+      00006D CFu03uDE         [ 2]  241 	ldw	_NumPrimes+0, x
+                           000070   242 	Sprimes$_CalcPrimes$39 ==.
+                                    243 ; genLabel
+      000070                        244 00116$:
+                           000070   245 	Sprimes$_CalcPrimes$40 ==.
+                           000070   246 	Sprimes$_CalcPrimes$41 ==.
+                                    247 ;	primes.c: 56: for (i = 2; i < sizeof(aIsPrime); i++) {
+                                    248 ; genPlus
+      000070 90 5C            [ 1]  249 	incw	y
+                                    250 ; genCmp
+                                    251 ; genCmpTnz
+      000072 90 A3 03 DE      [ 2]  252 	cpw	y, #0x03de
+                                    253 ; peephole j5 changed absolute to relative unconditional jump.
+      000076 25 EB            [ 1]  254 	jrc	00115$
+                                    255 ; peephole j9 removed jra by using inverse jump logic
+                                    256 ; peephole j30 removed unused label 00184$.
+                                    257 ; skipping generated iCode
+                                    258 ; genLabel
+                                    259 ; peephole j30 removed unused label 00117$.
+                           000078   260 	Sprimes$_CalcPrimes$42 ==.
+                                    261 ;	primes.c: 61: }
+                                    262 ; genEndFunction
+      000078 5B 04            [ 2]  263 	addw	sp, #4
+                           00007A   264 	Sprimes$_CalcPrimes$43 ==.
+                           00007A   265 	Sprimes$_CalcPrimes$44 ==.
+                           00007A   266 	XG$_CalcPrimes$0$0 ==.
+      00007A 81               [ 4]  267 	ret
+                           00007B   268 	Sprimes$_CalcPrimes$45 ==.
+                                    269 	.area CODE
+                                    270 	.area CONST
+                                    271 	.area INITIALIZER
+                                    272 	.area CABS (ABS)
+                                    273 
+                                    274 	.area .debug_line (NOLOAD)
+      000000 00 00 01 5E            275 	.dw	0,Ldebug_line_end-Ldebug_line_start
+      000004                        276 Ldebug_line_start:
+      000004 00 02                  277 	.dw	2
+      000006 00 00 00 94            278 	.dw	0,Ldebug_line_stmt-6-Ldebug_line_start
+      00000A 01                     279 	.db	1
+      00000B 01                     280 	.db	1
+      00000C FB                     281 	.db	-5
+      00000D 0F                     282 	.db	15
+      00000E 0A                     283 	.db	10
+      00000F 00                     284 	.db	0
+      000010 01                     285 	.db	1
+      000011 01                     286 	.db	1
+      000012 01                     287 	.db	1
+      000013 01                     288 	.db	1
+      000014 00                     289 	.db	0
+      000015 00                     290 	.db	0
+      000016 00                     291 	.db	0
+      000017 01                     292 	.db	1
+      000018 2F 75 73 72 2F 62 69   293 	.ascii "/usr/bin/../share/sdcc/include/stm8"
+             6E 2F 2E 2E 2F 73 68
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65 2F 73 74 6D 38
+      00003B 00                     294 	.db	0
+      00003C 2F 75 73 72 2F 73 68   295 	.ascii "/usr/share/sdcc/include/stm8"
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65 2F 73 74 6D 38
+      000058 00                     296 	.db	0
+      000059 2F 75 73 72 2F 62 69   297 	.ascii "/usr/bin/../share/sdcc/include"
+             6E 2F 2E 2E 2F 73 68
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65
+      000077 00                     298 	.db	0
+      000078 2F 75 73 72 2F 73 68   299 	.ascii "/usr/share/sdcc/include"
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65
+      00008F 00                     300 	.db	0
+      000090 00                     301 	.db	0
+      000091 70 72 69 6D 65 73 2E   302 	.ascii "primes.c"
+             63
+      000099 00                     303 	.db	0
+      00009A 00                     304 	.uleb128	0
+      00009B 00                     305 	.uleb128	0
+      00009C 00                     306 	.uleb128	0
+      00009D 00                     307 	.db	0
+      00009E                        308 Ldebug_line_stmt:
+      00009E 00                     309 	.db	0
+      00009F 05                     310 	.uleb128	5
+      0000A0 02                     311 	.db	2
+      0000A1 00 00r00r00            312 	.dw	0,(Sprimes$_CalcPrimes$0)
+      0000A5 03                     313 	.db	3
+      0000A6 18                     314 	.sleb128	24
+      0000A7 01                     315 	.db	1
+      0000A8 00                     316 	.db	0
+      0000A9 05                     317 	.uleb128	5
+      0000AA 02                     318 	.db	2
+      0000AB 00 00r00r02            319 	.dw	0,(Sprimes$_CalcPrimes$3)
+      0000AF 03                     320 	.db	3
+      0000B0 07                     321 	.sleb128	7
+      0000B1 01                     322 	.db	1
+      0000B2 00                     323 	.db	0
+      0000B3 05                     324 	.uleb128	5
+      0000B4 02                     325 	.db	2
+      0000B5 00 00r00r10            326 	.dw	0,(Sprimes$_CalcPrimes$9)
+      0000B9 03                     327 	.db	3
+      0000BA 04                     328 	.sleb128	4
+      0000BB 01                     329 	.db	1
+      0000BC 00                     330 	.db	0
+      0000BD 05                     331 	.uleb128	5
+      0000BE 02                     332 	.db	2
+      0000BF 00 00r00r14            333 	.dw	0,(Sprimes$_CalcPrimes$11)
+      0000C3 03                     334 	.db	3
+      0000C4 01                     335 	.sleb128	1
+      0000C5 01                     336 	.db	1
+      0000C6 00                     337 	.db	0
+      0000C7 05                     338 	.uleb128	5
+      0000C8 02                     339 	.db	2
+      0000C9 00 00r00r19            340 	.dw	0,(Sprimes$_CalcPrimes$13)
+      0000CD 03                     341 	.db	3
+      0000CE 7F                     342 	.sleb128	-1
+      0000CF 01                     343 	.db	1
+      0000D0 00                     344 	.db	0
+      0000D1 05                     345 	.uleb128	5
+      0000D2 02                     346 	.db	2
+      0000D3 00 00r00r23            347 	.dw	0,(Sprimes$_CalcPrimes$14)
+      0000D7 03                     348 	.db	3
+      0000D8 07                     349 	.sleb128	7
+      0000D9 01                     350 	.db	1
+      0000DA 00                     351 	.db	0
+      0000DB 05                     352 	.uleb128	5
+      0000DC 02                     353 	.db	2
+      0000DD 00 00r00r28            354 	.dw	0,(Sprimes$_CalcPrimes$16)
+      0000E1 03                     355 	.db	3
+      0000E2 01                     356 	.sleb128	1
+      0000E3 01                     357 	.db	1
+      0000E4 00                     358 	.db	0
+      0000E5 05                     359 	.uleb128	5
+      0000E6 02                     360 	.db	2
+      0000E7 00 00r00r2F            361 	.dw	0,(Sprimes$_CalcPrimes$18)
+      0000EB 03                     362 	.db	3
+      0000EC 01                     363 	.sleb128	1
+      0000ED 01                     364 	.db	1
+      0000EE 00                     365 	.db	0
+      0000EF 05                     366 	.uleb128	5
+      0000F0 02                     367 	.db	2
+      0000F1 00 00r00r34            368 	.dw	0,(Sprimes$_CalcPrimes$20)
+      0000F5 03                     369 	.db	3
+      0000F6 01                     370 	.sleb128	1
+      0000F7 01                     371 	.db	1
+      0000F8 00                     372 	.db	0
+      0000F9 05                     373 	.uleb128	5
+      0000FA 02                     374 	.db	2
+      0000FB 00 00r00r3D            375 	.dw	0,(Sprimes$_CalcPrimes$24)
+      0000FF 03                     376 	.db	3
+      000100 01                     377 	.sleb128	1
+      000101 01                     378 	.db	1
+      000102 00                     379 	.db	0
+      000103 05                     380 	.uleb128	5
+      000104 02                     381 	.db	2
+      000105 00 00r00r42            382 	.dw	0,(Sprimes$_CalcPrimes$25)
+      000109 03                     383 	.db	3
+      00010A 01                     384 	.sleb128	1
+      00010B 01                     385 	.db	1
+      00010C 00                     386 	.db	0
+      00010D 05                     387 	.uleb128	5
+      00010E 02                     388 	.db	2
+      00010F 00 00r00r45            389 	.dw	0,(Sprimes$_CalcPrimes$27)
+      000113 03                     390 	.db	3
+      000114 01                     391 	.sleb128	1
+      000115 01                     392 	.db	1
+      000116 00                     393 	.db	0
+      000117 05                     394 	.uleb128	5
+      000118 02                     395 	.db	2
+      000119 00 00r00r4B            396 	.dw	0,(Sprimes$_CalcPrimes$30)
+      00011D 03                     397 	.db	3
+      00011E 7A                     398 	.sleb128	-6
+      00011F 01                     399 	.db	1
+      000120 00                     400 	.db	0
+      000121 05                     401 	.uleb128	5
+      000122 02                     402 	.db	2
+      000123 00 00r00r5B            403 	.dw	0,(Sprimes$_CalcPrimes$33)
+      000127 03                     404 	.db	3
+      000128 0C                     405 	.sleb128	12
+      000129 01                     406 	.db	1
+      00012A 00                     407 	.db	0
+      00012B 05                     408 	.uleb128	5
+      00012C 02                     409 	.db	2
+      00012D 00 00r00r5F            410 	.dw	0,(Sprimes$_CalcPrimes$34)
+      000131 03                     411 	.db	3
+      000132 01                     412 	.sleb128	1
+      000133 01                     413 	.db	1
+      000134 00                     414 	.db	0
+      000135 05                     415 	.uleb128	5
+      000136 02                     416 	.db	2
+      000137 00 00r00r63            417 	.dw	0,(Sprimes$_CalcPrimes$36)
+      00013B 03                     418 	.db	3
+      00013C 01                     419 	.sleb128	1
+      00013D 01                     420 	.db	1
+      00013E 00                     421 	.db	0
+      00013F 05                     422 	.uleb128	5
+      000140 02                     423 	.db	2
+      000141 00 00r00r69            424 	.dw	0,(Sprimes$_CalcPrimes$38)
+      000145 03                     425 	.db	3
+      000146 01                     426 	.sleb128	1
+      000147 01                     427 	.db	1
+      000148 00                     428 	.db	0
+      000149 05                     429 	.uleb128	5
+      00014A 02                     430 	.db	2
+      00014B 00 00r00r70            431 	.dw	0,(Sprimes$_CalcPrimes$41)
+      00014F 03                     432 	.db	3
+      000150 7E                     433 	.sleb128	-2
+      000151 01                     434 	.db	1
+      000152 00                     435 	.db	0
+      000153 05                     436 	.uleb128	5
+      000154 02                     437 	.db	2
+      000155 00 00r00r78            438 	.dw	0,(Sprimes$_CalcPrimes$42)
+      000159 03                     439 	.db	3
+      00015A 05                     440 	.sleb128	5
+      00015B 01                     441 	.db	1
+      00015C 09                     442 	.db	9
+      00015D 00 03                  443 	.dw	1+Sprimes$_CalcPrimes$44-Sprimes$_CalcPrimes$42
+      00015F 00                     444 	.db	0
+      000160 01                     445 	.uleb128	1
+      000161 01                     446 	.db	1
+      000162                        447 Ldebug_line_end:
+                                    448 
+                                    449 	.area .debug_loc (NOLOAD)
+      000000                        450 Ldebug_loc_start:
+      000000 00 00r00r7A            451 	.dw	0,(Sprimes$_CalcPrimes$43)
+      000004 00 00r00r7B            452 	.dw	0,(Sprimes$_CalcPrimes$45)
+      000008 00 02                  453 	.dw	2
+      00000A 78                     454 	.db	120
+      00000B 01                     455 	.sleb128	1
+      00000C 00 00r00r56            456 	.dw	0,(Sprimes$_CalcPrimes$32)
+      000010 00 00r00r7A            457 	.dw	0,(Sprimes$_CalcPrimes$43)
+      000014 00 02                  458 	.dw	2
+      000016 78                     459 	.db	120
+      000017 05                     460 	.sleb128	5
+      000018 00 00r00r51            461 	.dw	0,(Sprimes$_CalcPrimes$31)
+      00001C 00 00r00r56            462 	.dw	0,(Sprimes$_CalcPrimes$32)
+      000020 00 02                  463 	.dw	2
+      000022 78                     464 	.db	120
+      000023 07                     465 	.sleb128	7
+      000024 00 00r00r37            466 	.dw	0,(Sprimes$_CalcPrimes$21)
+      000028 00 00r00r51            467 	.dw	0,(Sprimes$_CalcPrimes$31)
+      00002C 00 02                  468 	.dw	2
+      00002E 78                     469 	.db	120
+      00002F 05                     470 	.sleb128	5
+      000030 00 00r00r32            471 	.dw	0,(Sprimes$_CalcPrimes$19)
+      000034 00 00r00r37            472 	.dw	0,(Sprimes$_CalcPrimes$21)
+      000038 00 02                  473 	.dw	2
+      00003A 78                     474 	.db	120
+      00003B 07                     475 	.sleb128	7
+      00003C 00 00r00r10            476 	.dw	0,(Sprimes$_CalcPrimes$8)
+      000040 00 00r00r32            477 	.dw	0,(Sprimes$_CalcPrimes$19)
+      000044 00 02                  478 	.dw	2
+      000046 78                     479 	.db	120
+      000047 05                     480 	.sleb128	5
+      000048 00 00r00r0A            481 	.dw	0,(Sprimes$_CalcPrimes$7)
+      00004C 00 00r00r10            482 	.dw	0,(Sprimes$_CalcPrimes$8)
+      000050 00 02                  483 	.dw	2
+      000052 78                     484 	.db	120
+      000053 09                     485 	.sleb128	9
+      000054 00 00r00r08            486 	.dw	0,(Sprimes$_CalcPrimes$6)
+      000058 00 00r00r0A            487 	.dw	0,(Sprimes$_CalcPrimes$7)
+      00005C 00 02                  488 	.dw	2
+      00005E 78                     489 	.db	120
+      00005F 08                     490 	.sleb128	8
+      000060 00 00r00r06            491 	.dw	0,(Sprimes$_CalcPrimes$5)
+      000064 00 00r00r08            492 	.dw	0,(Sprimes$_CalcPrimes$6)
+      000068 00 02                  493 	.dw	2
+      00006A 78                     494 	.db	120
+      00006B 07                     495 	.sleb128	7
+      00006C 00 00r00r04            496 	.dw	0,(Sprimes$_CalcPrimes$4)
+      000070 00 00r00r06            497 	.dw	0,(Sprimes$_CalcPrimes$5)
+      000074 00 02                  498 	.dw	2
+      000076 78                     499 	.db	120
+      000077 06                     500 	.sleb128	6
+      000078 00 00r00r02            501 	.dw	0,(Sprimes$_CalcPrimes$2)
+      00007C 00 00r00r04            502 	.dw	0,(Sprimes$_CalcPrimes$4)
+      000080 00 02                  503 	.dw	2
+      000082 78                     504 	.db	120
+      000083 05                     505 	.sleb128	5
+      000084 00 00r00r00            506 	.dw	0,(Sprimes$_CalcPrimes$1)
+      000088 00 00r00r02            507 	.dw	0,(Sprimes$_CalcPrimes$2)
+      00008C 00 02                  508 	.dw	2
+      00008E 78                     509 	.db	120
+      00008F 01                     510 	.sleb128	1
+      000090 00 00 00 00            511 	.dw	0,0
+      000094 00 00 00 00            512 	.dw	0,0
+                                    513 
+                                    514 	.area .debug_abbrev (NOLOAD)
+      000000                        515 Ldebug_abbrev:
+      000000 01                     516 	.uleb128	1
+      000001 11                     517 	.uleb128	17
+      000002 01                     518 	.db	1
+      000003 03                     519 	.uleb128	3
+      000004 08                     520 	.uleb128	8
+      000005 10                     521 	.uleb128	16
+      000006 06                     522 	.uleb128	6
+      000007 13                     523 	.uleb128	19
+      000008 0B                     524 	.uleb128	11
+      000009 25                     525 	.uleb128	37
+      00000A 08                     526 	.uleb128	8
+      00000B 00                     527 	.uleb128	0
+      00000C 00                     528 	.uleb128	0
+      00000D 02                     529 	.uleb128	2
+      00000E 2E                     530 	.uleb128	46
+      00000F 01                     531 	.db	1
+      000010 01                     532 	.uleb128	1
+      000011 13                     533 	.uleb128	19
+      000012 03                     534 	.uleb128	3
+      000013 08                     535 	.uleb128	8
+      000014 11                     536 	.uleb128	17
+      000015 01                     537 	.uleb128	1
+      000016 12                     538 	.uleb128	18
+      000017 01                     539 	.uleb128	1
+      000018 3F                     540 	.uleb128	63
+      000019 0C                     541 	.uleb128	12
+      00001A 40                     542 	.uleb128	64
+      00001B 06                     543 	.uleb128	6
+      00001C 00                     544 	.uleb128	0
+      00001D 00                     545 	.uleb128	0
+      00001E 03                     546 	.uleb128	3
+      00001F 0B                     547 	.uleb128	11
+      000020 00                     548 	.db	0
+      000021 11                     549 	.uleb128	17
+      000022 01                     550 	.uleb128	1
+      000023 12                     551 	.uleb128	18
+      000024 01                     552 	.uleb128	1
+      000025 00                     553 	.uleb128	0
+      000026 00                     554 	.uleb128	0
+      000027 04                     555 	.uleb128	4
+      000028 0B                     556 	.uleb128	11
+      000029 01                     557 	.db	1
+      00002A 01                     558 	.uleb128	1
+      00002B 13                     559 	.uleb128	19
+      00002C 11                     560 	.uleb128	17
+      00002D 01                     561 	.uleb128	1
+      00002E 12                     562 	.uleb128	18
+      00002F 01                     563 	.uleb128	1
+      000030 00                     564 	.uleb128	0
+      000031 00                     565 	.uleb128	0
+      000032 05                     566 	.uleb128	5
+      000033 0B                     567 	.uleb128	11
+      000034 01                     568 	.db	1
+      000035 11                     569 	.uleb128	17
+      000036 01                     570 	.uleb128	1
+      000037 12                     571 	.uleb128	18
+      000038 01                     572 	.uleb128	1
+      000039 00                     573 	.uleb128	0
+      00003A 00                     574 	.uleb128	0
+      00003B 06                     575 	.uleb128	6
+      00003C 34                     576 	.uleb128	52
+      00003D 00                     577 	.db	0
+      00003E 02                     578 	.uleb128	2
+      00003F 0A                     579 	.uleb128	10
+      000040 03                     580 	.uleb128	3
+      000041 08                     581 	.uleb128	8
+      000042 49                     582 	.uleb128	73
+      000043 13                     583 	.uleb128	19
+      000044 00                     584 	.uleb128	0
+      000045 00                     585 	.uleb128	0
+      000046 07                     586 	.uleb128	7
+      000047 24                     587 	.uleb128	36
+      000048 00                     588 	.db	0
+      000049 03                     589 	.uleb128	3
+      00004A 08                     590 	.uleb128	8
+      00004B 0B                     591 	.uleb128	11
+      00004C 0B                     592 	.uleb128	11
+      00004D 3E                     593 	.uleb128	62
+      00004E 0B                     594 	.uleb128	11
+      00004F 00                     595 	.uleb128	0
+      000050 00                     596 	.uleb128	0
+      000051 08                     597 	.uleb128	8
+      000052 01                     598 	.uleb128	1
+      000053 01                     599 	.db	1
+      000054 01                     600 	.uleb128	1
+      000055 13                     601 	.uleb128	19
+      000056 0B                     602 	.uleb128	11
+      000057 05                     603 	.uleb128	5
+      000058 49                     604 	.uleb128	73
+      000059 13                     605 	.uleb128	19
+      00005A 00                     606 	.uleb128	0
+      00005B 00                     607 	.uleb128	0
+      00005C 09                     608 	.uleb128	9
+      00005D 21                     609 	.uleb128	33
+      00005E 00                     610 	.db	0
+      00005F 2F                     611 	.uleb128	47
+      000060 05                     612 	.uleb128	5
+      000061 00                     613 	.uleb128	0
+      000062 00                     614 	.uleb128	0
+      000063 00                     615 	.uleb128	0
+                                    616 
+                                    617 	.area .debug_info (NOLOAD)
+      000000 00 00 01 06            618 	.dw	0,Ldebug_info_end-Ldebug_info_start
+      000004                        619 Ldebug_info_start:
+      000004 00 02                  620 	.dw	2
+      000006 00 00r00r00            621 	.dw	0,(Ldebug_abbrev)
+      00000A 04                     622 	.db	4
+      00000B 01                     623 	.uleb128	1
+      00000C 70 72 69 6D 65 73 2E   624 	.ascii "primes.c"
+             63
+      000014 00                     625 	.db	0
+      000015 00 00r00r00            626 	.dw	0,(Ldebug_line_start+-4)
+      000019 01                     627 	.db	1
+      00001A 53 44 43 43 20 76 65   628 	.ascii "SDCC version 4.4.0 #14620"
+             72 73 69 6F 6E 20 34
+             2E 34 2E 30 20 23 31
+             34 36 32 30
+      000033 00                     629 	.db	0
+      000034 02                     630 	.uleb128	2
+      000035 00 00 00 B0            631 	.dw	0,176
+      000039 5F 43 61 6C 63 50 72   632 	.ascii "_CalcPrimes"
+             69 6D 65 73
+      000044 00                     633 	.db	0
+      000045 00 00r00r00            634 	.dw	0,(__CalcPrimes)
+      000049 00 00r00r7B            635 	.dw	0,(XG$_CalcPrimes$0$0+1)
+      00004D 01                     636 	.db	1
+      00004E 00 00r00r00            637 	.dw	0,(Ldebug_loc_start)
+      000052 03                     638 	.uleb128	3
+      000053 00 00r00r14            639 	.dw	0,(Sprimes$_CalcPrimes$10)
+      000057 00 00r00r19            640 	.dw	0,(Sprimes$_CalcPrimes$12)
+      00005B 04                     641 	.uleb128	4
+      00005C 00 00 00 7C            642 	.dw	0,124
+      000060 00 00r00r28            643 	.dw	0,(Sprimes$_CalcPrimes$15)
+      000064 00 00r00r4B            644 	.dw	0,(Sprimes$_CalcPrimes$29)
+      000068 05                     645 	.uleb128	5
+      000069 00 00r00r3D            646 	.dw	0,(Sprimes$_CalcPrimes$23)
+      00006D 00 00r00r4B            647 	.dw	0,(Sprimes$_CalcPrimes$28)
+      000071 03                     648 	.uleb128	3
+      000072 00 00r00r38            649 	.dw	0,(Sprimes$_CalcPrimes$22)
+      000076 00 00r00r3D            650 	.dw	0,(Sprimes$_CalcPrimes$23)
+      00007A 00                     651 	.uleb128	0
+      00007B 00                     652 	.uleb128	0
+      00007C 04                     653 	.uleb128	4
+      00007D 00 00 00 93            654 	.dw	0,147
+      000081 00 00r00r63            655 	.dw	0,(Sprimes$_CalcPrimes$35)
+      000085 00 00r00r70            656 	.dw	0,(Sprimes$_CalcPrimes$40)
+      000089 03                     657 	.uleb128	3
+      00008A 00 00r00r69            658 	.dw	0,(Sprimes$_CalcPrimes$37)
+      00008E 00 00r00r70            659 	.dw	0,(Sprimes$_CalcPrimes$39)
+      000092 00                     660 	.uleb128	0
+      000093 06                     661 	.uleb128	6
+      000094 06                     662 	.db	6
+      000095 54                     663 	.db	84
+      000096 93                     664 	.db	147
+      000097 01                     665 	.uleb128	1
+      000098 53                     666 	.db	83
+      000099 93                     667 	.db	147
+      00009A 01                     668 	.uleb128	1
+      00009B 69                     669 	.ascii "i"
+      00009C 00                     670 	.db	0
+      00009D 00 00 00 B0            671 	.dw	0,176
+      0000A1 06                     672 	.uleb128	6
+      0000A2 06                     673 	.db	6
+      0000A3 54                     674 	.db	84
+      0000A4 93                     675 	.db	147
+      0000A5 01                     676 	.uleb128	1
+      0000A6 53                     677 	.db	83
+      0000A7 93                     678 	.db	147
+      0000A8 01                     679 	.uleb128	1
+      0000A9 6A                     680 	.ascii "j"
+      0000AA 00                     681 	.db	0
+      0000AB 00 00 00 B0            682 	.dw	0,176
+      0000AF 00                     683 	.uleb128	0
+      0000B0 07                     684 	.uleb128	7
+      0000B1 75 6E 73 69 67 6E 65   685 	.ascii "unsigned int"
+             64 20 69 6E 74
+      0000BD 00                     686 	.db	0
+      0000BE 02                     687 	.db	2
+      0000BF 07                     688 	.db	7
+      0000C0 07                     689 	.uleb128	7
+      0000C1 75 6E 73 69 67 6E 65   690 	.ascii "unsigned char"
+             64 20 63 68 61 72
+      0000CE 00                     691 	.db	0
+      0000CF 01                     692 	.db	1
+      0000D0 08                     693 	.db	8
+      0000D1 08                     694 	.uleb128	8
+      0000D2 00 00 00 E0            695 	.dw	0,224
+      0000D6 03 DE                  696 	.dw	990
+      0000D8 00 00 00 C0            697 	.dw	0,192
+      0000DC 09                     698 	.uleb128	9
+      0000DD 03 DD                  699 	.dw	989
+      0000DF 00                     700 	.uleb128	0
+      0000E0 06                     701 	.uleb128	6
+      0000E1 05                     702 	.db	5
+      0000E2 03                     703 	.db	3
+      0000E3 00 00r00r00            704 	.dw	0,(_aIsPrime)
+      0000E7 61 49 73 50 72 69 6D   705 	.ascii "aIsPrime"
+             65
+      0000EF 00                     706 	.db	0
+      0000F0 00 00 00 D1            707 	.dw	0,209
+      0000F4 06                     708 	.uleb128	6
+      0000F5 05                     709 	.db	5
+      0000F6 03                     710 	.db	3
+      0000F7 00 00r03rDE            711 	.dw	0,(_NumPrimes)
+      0000FB 4E 75 6D 50 72 69 6D   712 	.ascii "NumPrimes"
+             65 73
+      000104 00                     713 	.db	0
+      000105 00 00 00 B0            714 	.dw	0,176
+      000109 00                     715 	.uleb128	0
+      00010A                        716 Ldebug_info_end:
+                                    717 
+                                    718 	.area .debug_pubnames (NOLOAD)
+      000000 00 00 00 1E            719 	.dw	0,Ldebug_pubnames_end-Ldebug_pubnames_start
+      000004                        720 Ldebug_pubnames_start:
+      000004 00 02                  721 	.dw	2
+      000006 00 00r00r00            722 	.dw	0,(Ldebug_info_start-4)
+      00000A 00 00 01 0A            723 	.dw	0,4+Ldebug_info_end-Ldebug_info_start
+      00000E 00 00 00 34            724 	.dw	0,52
+      000012 5F 43 61 6C 63 50 72   725 	.ascii "_CalcPrimes"
+             69 6D 65 73
+      00001D 00                     726 	.db	0
+      00001E 00 00 00 00            727 	.dw	0,0
+      000022                        728 Ldebug_pubnames_end:
+                                    729 
+                                    730 	.area .debug_frame (NOLOAD)
+      000000 00 00                  731 	.dw	0
+      000002 00 10                  732 	.dw	Ldebug_CIE0_end-Ldebug_CIE0_start
+      000004                        733 Ldebug_CIE0_start:
+      000004 FF FF                  734 	.dw	0xffff
+      000006 FF FF                  735 	.dw	0xffff
+      000008 01                     736 	.db	1
+      000009 00                     737 	.db	0
+      00000A 01                     738 	.uleb128	1
+      00000B 7F                     739 	.sleb128	-1
+      00000C 09                     740 	.db	9
+      00000D 0C                     741 	.db	12
+      00000E 08                     742 	.uleb128	8
+      00000F 02                     743 	.uleb128	2
+      000010 89                     744 	.db	137
+      000011 01                     745 	.uleb128	1
+      000012 00                     746 	.db	0
+      000013 00                     747 	.db	0
+      000014                        748 Ldebug_CIE0_end:
+      000014 00 00 00 60            749 	.dw	0,96
+      000018 00 00r00r00            750 	.dw	0,(Ldebug_CIE0_start-4)
+      00001C 00 00r00r00            751 	.dw	0,(Sprimes$_CalcPrimes$1)	;initial loc
+      000020 00 00 00 7B            752 	.dw	0,Sprimes$_CalcPrimes$45-Sprimes$_CalcPrimes$1
+      000024 01                     753 	.db	1
+      000025 00 00r00r00            754 	.dw	0,(Sprimes$_CalcPrimes$1)
+      000029 0E                     755 	.db	14
+      00002A 02                     756 	.uleb128	2
+      00002B 01                     757 	.db	1
+      00002C 00 00r00r02            758 	.dw	0,(Sprimes$_CalcPrimes$2)
+      000030 0E                     759 	.db	14
+      000031 06                     760 	.uleb128	6
+      000032 01                     761 	.db	1
+      000033 00 00r00r04            762 	.dw	0,(Sprimes$_CalcPrimes$4)
+      000037 0E                     763 	.db	14
+      000038 07                     764 	.uleb128	7
+      000039 01                     765 	.db	1
+      00003A 00 00r00r06            766 	.dw	0,(Sprimes$_CalcPrimes$5)
+      00003E 0E                     767 	.db	14
+      00003F 08                     768 	.uleb128	8
+      000040 01                     769 	.db	1
+      000041 00 00r00r08            770 	.dw	0,(Sprimes$_CalcPrimes$6)
+      000045 0E                     771 	.db	14
+      000046 09                     772 	.uleb128	9
+      000047 01                     773 	.db	1
+      000048 00 00r00r0A            774 	.dw	0,(Sprimes$_CalcPrimes$7)
+      00004C 0E                     775 	.db	14
+      00004D 0A                     776 	.uleb128	10
+      00004E 01                     777 	.db	1
+      00004F 00 00r00r10            778 	.dw	0,(Sprimes$_CalcPrimes$8)
+      000053 0E                     779 	.db	14
+      000054 06                     780 	.uleb128	6
+      000055 01                     781 	.db	1
+      000056 00 00r00r32            782 	.dw	0,(Sprimes$_CalcPrimes$19)
+      00005A 0E                     783 	.db	14
+      00005B 08                     784 	.uleb128	8
+      00005C 01                     785 	.db	1
+      00005D 00 00r00r37            786 	.dw	0,(Sprimes$_CalcPrimes$21)
+      000061 0E                     787 	.db	14
+      000062 06                     788 	.uleb128	6
+      000063 01                     789 	.db	1
+      000064 00 00r00r51            790 	.dw	0,(Sprimes$_CalcPrimes$31)
+      000068 0E                     791 	.db	14
+      000069 08                     792 	.uleb128	8
+      00006A 01                     793 	.db	1
+      00006B 00 00r00r56            794 	.dw	0,(Sprimes$_CalcPrimes$32)
+      00006F 0E                     795 	.db	14
+      000070 06                     796 	.uleb128	6
+      000071 01                     797 	.db	1
+      000072 00 00r00r7A            798 	.dw	0,(Sprimes$_CalcPrimes$43)
+      000076 0E                     799 	.db	14
+      000077 02                     800 	.uleb128	2

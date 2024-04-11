@@ -1,0 +1,15 @@
+-muwx
+-E bin/main.elf
+-y
+-b HOME = 0x8000
+-b DATA = 0x0001
+-k /usr/bin/../share/sdcc/lib/stm8
+-k /usr/share/sdcc/lib/stm8
+-l stm8
+-l stm8
+bin/main.rel
+bin/primes.rel
+bin/timer4.rel
+bin/uart.rel
+
+-e

@@ -1,0 +1,486 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ISO C Compiler 
+                                      3 ; Version 4.4.0 #14620 (Linux)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module uart
+                                      6 	.optsdcc -mstm8
+                                      7 	
+                                      8 ;--------------------------------------------------------
+                                      9 ; Public variables in this module
+                                     10 ;--------------------------------------------------------
+                                     11 	.globl _UART_begin
+                                     12 ;--------------------------------------------------------
+                                     13 ; ram data
+                                     14 ;--------------------------------------------------------
+                                     15 	.area DATA
+                                     16 ;--------------------------------------------------------
+                                     17 ; ram data
+                                     18 ;--------------------------------------------------------
+                                     19 	.area INITIALIZED
+                                     20 ;--------------------------------------------------------
+                                     21 ; absolute external ram data
+                                     22 ;--------------------------------------------------------
+                                     23 	.area DABS (ABS)
+                                     24 
+                                     25 ; default segment ordering for linker
+                                     26 	.area HOME
+                                     27 	.area GSINIT
+                                     28 	.area GSFINAL
+                                     29 	.area CONST
+                                     30 	.area INITIALIZER
+                                     31 	.area CODE
+                                     32 
+                                     33 ;--------------------------------------------------------
+                                     34 ; global & static initialisations
+                                     35 ;--------------------------------------------------------
+                                     36 	.area HOME
+                                     37 	.area GSINIT
+                                     38 	.area GSFINAL
+                                     39 	.area GSINIT
+                                     40 ;--------------------------------------------------------
+                                     41 ; Home
+                                     42 ;--------------------------------------------------------
+                                     43 	.area HOME
+                                     44 	.area HOME
+                                     45 ;--------------------------------------------------------
+                                     46 ; code
+                                     47 ;--------------------------------------------------------
+                                     48 	.area CODE
+                           000000    49 	Suart$UART_begin$0 ==.
+                                     50 ;	uart.c: 32: void UART_begin(uint32_t BR) {
+                                     51 ; genLabel
+                                     52 ;	-----------------------------------------
+                                     53 ;	 function UART_begin
+                                     54 ;	-----------------------------------------
+                                     55 ;	Register assignment might be sub-optimal.
+                                     56 ;	Stack space usage: 2 bytes.
+      000000                         57 _UART_begin:
+                           000000    58 	Suart$UART_begin$1 ==.
+      000000 89               [ 2]   59 	pushw	x
+                           000001    60 	Suart$UART_begin$2 ==.
+                           000001    61 	Suart$UART_begin$3 ==.
+                                     62 ;	uart.c: 37: sfr_UART1.CR1.byte = sfr_UART1_CR1_RESET_VALUE;  // enable UART1, 8 data bits, no parity control
+                                     63 ; genPointerSet
+      000001 35 00 52 34      [ 1]   64 	mov	0x5234+0, #0x00
+                           000005    65 	Suart$UART_begin$4 ==.
+                                     66 ;	uart.c: 38: sfr_UART1.CR2.byte = sfr_UART1_CR2_RESET_VALUE;  // no interrupts, disable sender/receiver 
+                                     67 ; genPointerSet
+      000005 35 00 52 35      [ 1]   68 	mov	0x5235+0, #0x00
+                           000009    69 	Suart$UART_begin$5 ==.
+                                     70 ;	uart.c: 39: sfr_UART1.CR3.byte = sfr_UART1_CR3_RESET_VALUE;  // no LIN support, 1 stop bit, no clock output(?)
+                                     71 ; genPointerSet
+      000009 35 00 52 36      [ 1]   72 	mov	0x5236+0, #0x00
+                           00000D    73 	Suart$UART_begin$6 ==.
+                                     74 ;	uart.c: 42: val16 = (uint16_t) (((uint32_t) 16000000L)/BR);
+                                     75 ; genIPush
+      00000D 1E 07            [ 2]   76 	ldw	x, (0x07, sp)
+      00000F 89               [ 2]   77 	pushw	x
+                           000010    78 	Suart$UART_begin$7 ==.
+      000010 1E 07            [ 2]   79 	ldw	x, (0x07, sp)
+      000012 89               [ 2]   80 	pushw	x
+                           000013    81 	Suart$UART_begin$8 ==.
+                                     82 ; genIPush
+      000013 4B 00            [ 1]   83 	push	#0x00
+                           000015    84 	Suart$UART_begin$9 ==.
+      000015 4B 24            [ 1]   85 	push	#0x24
+                           000017    86 	Suart$UART_begin$10 ==.
+      000017 4B F4            [ 1]   87 	push	#0xf4
+                           000019    88 	Suart$UART_begin$11 ==.
+      000019 4B 00            [ 1]   89 	push	#0x00
+                           00001B    90 	Suart$UART_begin$12 ==.
+                                     91 ; genCall
+      00001B CDr00r00         [ 4]   92 	call	__divulong
+      00001E 5B 08            [ 2]   93 	addw	sp, #8
+                           000020    94 	Suart$UART_begin$13 ==.
+                                     95 ; genCast
+                                     96 ; genAssign
+                           000020    97 	Suart$UART_begin$14 ==.
+                                     98 ;	uart.c: 43: sfr_UART1.BRR2.byte = (uint8_t) (((val16 & 0xF000) >> 8) | (val16 & 0x000F));
+                                     99 ; genCast
+                                    100 ; genAssign
+                                    101 ; peephole 5w replaced exgw-ldw by ldw.
+      000020 90 93            [ 1]  102 	ldw	y, x
+                                    103 ; genAnd
+      000022 0F 02            [ 1]  104 	clr	(0x02, sp)
+      000024 9E               [ 1]  105 	ld	a, xh
+      000025 A4 F0            [ 1]  106 	and	a, #0xf0
+                                    107 ; genGetByte
+      000027 6B 02            [ 1]  108 	ld	(0x02, sp), a
+                                    109 ; genCast
+                                    110 ; genAssign
+      000029 90 9F            [ 1]  111 	ld	a, yl
+                                    112 ; genAnd
+      00002B A4 0F            [ 1]  113 	and	a, #0x0f
+                                    114 ; genOr
+      00002D 1A 02            [ 1]  115 	or	a, (0x02, sp)
+                                    116 ; genPointerSet
+      00002F C7 52 33         [ 1]  117 	ld	0x5233, a
+                           000032   118 	Suart$UART_begin$15 ==.
+                                    119 ;	uart.c: 44: sfr_UART1.BRR1.byte = (uint8_t) ((val16 & 0x0FF0) >> 4);
+                                    120 ; genAnd
+      000032 9F               [ 1]  121 	ld	a, xl
+      000033 A4 F0            [ 1]  122 	and	a, #0xf0
+      000035 02               [ 1]  123 	rlwa	x
+                                    124 ; peephole r1 used rlwa.
+      000036 A4 0F            [ 1]  125 	and	a, #0x0f
+      000038 95               [ 1]  126 	ld	xh, a
+                                    127 ; genRightShiftLiteral
+      000039 A6 10            [ 1]  128 	ld	a, #0x10
+      00003B 62               [ 2]  129 	div	x, a
+                                    130 ; genCast
+                                    131 ; genAssign
+      00003C 9F               [ 1]  132 	ld	a, xl
+                                    133 ; genPointerSet
+      00003D C7 52 32         [ 1]  134 	ld	0x5232, a
+                           000040   135 	Suart$UART_begin$16 ==.
+                                    136 ;	uart.c: 47: sfr_UART1.CR2.REN  = 1;  // enable receiver
+                                    137 ; genAssign
+                                    138 ; genPointerSet
+                                    139 ; peephole 0w removed dead load into x from #0x5235.
+      000040 72 14 52 35      [ 1]  140 	bset	0x5235, #2
+                                    141 ; peephole 203x replaced 'or' by 'bset' (index register) ('0x5235' -> '0x5235').
+                           000044   142 	Suart$UART_begin$17 ==.
+                                    143 ;	uart.c: 48: sfr_UART1.CR2.TEN  = 1;  // enable sender
+                                    144 ; genAssign
+                                    145 ; genPointerSet
+      000044 C6 52 35         [ 1]  146 	ld	a, 0x5235
+      000047 AA 08            [ 1]  147 	or	a, #0x08
+      000049 C7 52 35         [ 1]  148 	ld	0x5235, a
+                                    149 ; peephole 330x replaced 'ldw-ld-or-ld' by 'ld-or-ld direct' ('0x5235' -> '0x5235').
+                                    150 ; genLabel
+                                    151 ; peephole j30 removed unused label 00101$.
+                           00004C   152 	Suart$UART_begin$18 ==.
+                                    153 ;	uart.c: 54: } // UART2_begin
+                                    154 ; genEndFunction
+      00004C 1E 03            [ 2]  155 	ldw	x, (3, sp)
+      00004E 5B 08            [ 2]  156 	addw	sp, #8
+                           000050   157 	Suart$UART_begin$19 ==.
+      000050 FC               [ 2]  158 	jp	(x)
+                           000051   159 	Suart$UART_begin$20 ==.
+                                    160 	.area CODE
+                                    161 	.area CONST
+                                    162 	.area INITIALIZER
+                                    163 	.area CABS (ABS)
+                                    164 
+                                    165 	.area .debug_line (NOLOAD)
+      000000 00 00 00 FC            166 	.dw	0,Ldebug_line_end-Ldebug_line_start
+      000004                        167 Ldebug_line_start:
+      000004 00 02                  168 	.dw	2
+      000006 00 00 00 92            169 	.dw	0,Ldebug_line_stmt-6-Ldebug_line_start
+      00000A 01                     170 	.db	1
+      00000B 01                     171 	.db	1
+      00000C FB                     172 	.db	-5
+      00000D 0F                     173 	.db	15
+      00000E 0A                     174 	.db	10
+      00000F 00                     175 	.db	0
+      000010 01                     176 	.db	1
+      000011 01                     177 	.db	1
+      000012 01                     178 	.db	1
+      000013 01                     179 	.db	1
+      000014 00                     180 	.db	0
+      000015 00                     181 	.db	0
+      000016 00                     182 	.db	0
+      000017 01                     183 	.db	1
+      000018 2F 75 73 72 2F 62 69   184 	.ascii "/usr/bin/../share/sdcc/include/stm8"
+             6E 2F 2E 2E 2F 73 68
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65 2F 73 74 6D 38
+      00003B 00                     185 	.db	0
+      00003C 2F 75 73 72 2F 73 68   186 	.ascii "/usr/share/sdcc/include/stm8"
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65 2F 73 74 6D 38
+      000058 00                     187 	.db	0
+      000059 2F 75 73 72 2F 62 69   188 	.ascii "/usr/bin/../share/sdcc/include"
+             6E 2F 2E 2E 2F 73 68
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65
+      000077 00                     189 	.db	0
+      000078 2F 75 73 72 2F 73 68   190 	.ascii "/usr/share/sdcc/include"
+             61 72 65 2F 73 64 63
+             63 2F 69 6E 63 6C 75
+             64 65
+      00008F 00                     191 	.db	0
+      000090 00                     192 	.db	0
+      000091 75 61 72 74 2E 63      193 	.ascii "uart.c"
+      000097 00                     194 	.db	0
+      000098 00                     195 	.uleb128	0
+      000099 00                     196 	.uleb128	0
+      00009A 00                     197 	.uleb128	0
+      00009B 00                     198 	.db	0
+      00009C                        199 Ldebug_line_stmt:
+      00009C 00                     200 	.db	0
+      00009D 05                     201 	.uleb128	5
+      00009E 02                     202 	.db	2
+      00009F 00 00r00r00            203 	.dw	0,(Suart$UART_begin$0)
+      0000A3 03                     204 	.db	3
+      0000A4 1F                     205 	.sleb128	31
+      0000A5 01                     206 	.db	1
+      0000A6 00                     207 	.db	0
+      0000A7 05                     208 	.uleb128	5
+      0000A8 02                     209 	.db	2
+      0000A9 00 00r00r01            210 	.dw	0,(Suart$UART_begin$3)
+      0000AD 03                     211 	.db	3
+      0000AE 05                     212 	.sleb128	5
+      0000AF 01                     213 	.db	1
+      0000B0 00                     214 	.db	0
+      0000B1 05                     215 	.uleb128	5
+      0000B2 02                     216 	.db	2
+      0000B3 00 00r00r05            217 	.dw	0,(Suart$UART_begin$4)
+      0000B7 03                     218 	.db	3
+      0000B8 01                     219 	.sleb128	1
+      0000B9 01                     220 	.db	1
+      0000BA 00                     221 	.db	0
+      0000BB 05                     222 	.uleb128	5
+      0000BC 02                     223 	.db	2
+      0000BD 00 00r00r09            224 	.dw	0,(Suart$UART_begin$5)
+      0000C1 03                     225 	.db	3
+      0000C2 01                     226 	.sleb128	1
+      0000C3 01                     227 	.db	1
+      0000C4 00                     228 	.db	0
+      0000C5 05                     229 	.uleb128	5
+      0000C6 02                     230 	.db	2
+      0000C7 00 00r00r0D            231 	.dw	0,(Suart$UART_begin$6)
+      0000CB 03                     232 	.db	3
+      0000CC 03                     233 	.sleb128	3
+      0000CD 01                     234 	.db	1
+      0000CE 00                     235 	.db	0
+      0000CF 05                     236 	.uleb128	5
+      0000D0 02                     237 	.db	2
+      0000D1 00 00r00r20            238 	.dw	0,(Suart$UART_begin$14)
+      0000D5 03                     239 	.db	3
+      0000D6 01                     240 	.sleb128	1
+      0000D7 01                     241 	.db	1
+      0000D8 00                     242 	.db	0
+      0000D9 05                     243 	.uleb128	5
+      0000DA 02                     244 	.db	2
+      0000DB 00 00r00r32            245 	.dw	0,(Suart$UART_begin$15)
+      0000DF 03                     246 	.db	3
+      0000E0 01                     247 	.sleb128	1
+      0000E1 01                     248 	.db	1
+      0000E2 00                     249 	.db	0
+      0000E3 05                     250 	.uleb128	5
+      0000E4 02                     251 	.db	2
+      0000E5 00 00r00r40            252 	.dw	0,(Suart$UART_begin$16)
+      0000E9 03                     253 	.db	3
+      0000EA 03                     254 	.sleb128	3
+      0000EB 01                     255 	.db	1
+      0000EC 00                     256 	.db	0
+      0000ED 05                     257 	.uleb128	5
+      0000EE 02                     258 	.db	2
+      0000EF 00 00r00r44            259 	.dw	0,(Suart$UART_begin$17)
+      0000F3 03                     260 	.db	3
+      0000F4 01                     261 	.sleb128	1
+      0000F5 01                     262 	.db	1
+      0000F6 00                     263 	.db	0
+      0000F7 05                     264 	.uleb128	5
+      0000F8 02                     265 	.db	2
+      0000F9 00 00r00r4C            266 	.dw	0,(Suart$UART_begin$18)
+      0000FD 03                     267 	.db	3
+      0000FE 06                     268 	.sleb128	6
+      0000FF 01                     269 	.db	1
+      000100                        270 Ldebug_line_end:
+                                    271 
+                                    272 	.area .debug_loc (NOLOAD)
+      000000                        273 Ldebug_loc_start:
+                                    274 
+                                    275 	.area .debug_abbrev (NOLOAD)
+      000000                        276 Ldebug_abbrev:
+      000000 01                     277 	.uleb128	1
+      000001 11                     278 	.uleb128	17
+      000002 01                     279 	.db	1
+      000003 03                     280 	.uleb128	3
+      000004 08                     281 	.uleb128	8
+      000005 10                     282 	.uleb128	16
+      000006 06                     283 	.uleb128	6
+      000007 13                     284 	.uleb128	19
+      000008 0B                     285 	.uleb128	11
+      000009 25                     286 	.uleb128	37
+      00000A 08                     287 	.uleb128	8
+      00000B 00                     288 	.uleb128	0
+      00000C 00                     289 	.uleb128	0
+      00000D 02                     290 	.uleb128	2
+      00000E 2E                     291 	.uleb128	46
+      00000F 01                     292 	.db	1
+      000010 01                     293 	.uleb128	1
+      000011 13                     294 	.uleb128	19
+      000012 03                     295 	.uleb128	3
+      000013 08                     296 	.uleb128	8
+      000014 11                     297 	.uleb128	17
+      000015 01                     298 	.uleb128	1
+      000016 3F                     299 	.uleb128	63
+      000017 0C                     300 	.uleb128	12
+      000018 00                     301 	.uleb128	0
+      000019 00                     302 	.uleb128	0
+      00001A 03                     303 	.uleb128	3
+      00001B 05                     304 	.uleb128	5
+      00001C 00                     305 	.db	0
+      00001D 02                     306 	.uleb128	2
+      00001E 0A                     307 	.uleb128	10
+      00001F 03                     308 	.uleb128	3
+      000020 08                     309 	.uleb128	8
+      000021 49                     310 	.uleb128	73
+      000022 13                     311 	.uleb128	19
+      000023 00                     312 	.uleb128	0
+      000024 00                     313 	.uleb128	0
+      000025 04                     314 	.uleb128	4
+      000026 34                     315 	.uleb128	52
+      000027 00                     316 	.db	0
+      000028 02                     317 	.uleb128	2
+      000029 0A                     318 	.uleb128	10
+      00002A 03                     319 	.uleb128	3
+      00002B 08                     320 	.uleb128	8
+      00002C 49                     321 	.uleb128	73
+      00002D 13                     322 	.uleb128	19
+      00002E 00                     323 	.uleb128	0
+      00002F 00                     324 	.uleb128	0
+      000030 05                     325 	.uleb128	5
+      000031 24                     326 	.uleb128	36
+      000032 00                     327 	.db	0
+      000033 03                     328 	.uleb128	3
+      000034 08                     329 	.uleb128	8
+      000035 0B                     330 	.uleb128	11
+      000036 0B                     331 	.uleb128	11
+      000037 3E                     332 	.uleb128	62
+      000038 0B                     333 	.uleb128	11
+      000039 00                     334 	.uleb128	0
+      00003A 00                     335 	.uleb128	0
+      00003B 00                     336 	.uleb128	0
+                                    337 
+                                    338 	.area .debug_info (NOLOAD)
+      000000 00 00 00 83            339 	.dw	0,Ldebug_info_end-Ldebug_info_start
+      000004                        340 Ldebug_info_start:
+      000004 00 02                  341 	.dw	2
+      000006 00 00r00r00            342 	.dw	0,(Ldebug_abbrev)
+      00000A 04                     343 	.db	4
+      00000B 01                     344 	.uleb128	1
+      00000C 75 61 72 74 2E 63      345 	.ascii "uart.c"
+      000012 00                     346 	.db	0
+      000013 00 00r00r00            347 	.dw	0,(Ldebug_line_start+-4)
+      000017 01                     348 	.db	1
+      000018 53 44 43 43 20 76 65   349 	.ascii "SDCC version 4.4.0 #14620"
+             72 73 69 6F 6E 20 34
+             2E 34 2E 30 20 23 31
+             34 36 32 30
+      000031 00                     350 	.db	0
+      000032 02                     351 	.uleb128	2
+      000033 00 00 00 65            352 	.dw	0,101
+      000037 55 41 52 54 5F 62 65   353 	.ascii "UART_begin"
+             67 69 6E
+      000041 00                     354 	.db	0
+      000042 00 00r00r00            355 	.dw	0,(_UART_begin)
+      000046 01                     356 	.db	1
+      000047 03                     357 	.uleb128	3
+      000048 02                     358 	.db	2
+      000049 91                     359 	.db	145
+      00004A 02                     360 	.sleb128	2
+      00004B 42 52                  361 	.ascii "BR"
+      00004D 00                     362 	.db	0
+      00004E 00 00 00 65            363 	.dw	0,101
+      000052 04                     364 	.uleb128	4
+      000053 06                     365 	.db	6
+      000054 54                     366 	.db	84
+      000055 93                     367 	.db	147
+      000056 01                     368 	.uleb128	1
+      000057 53                     369 	.db	83
+      000058 93                     370 	.db	147
+      000059 01                     371 	.uleb128	1
+      00005A 76 61 6C 31 36         372 	.ascii "val16"
+      00005F 00                     373 	.db	0
+      000060 00 00 00 76            374 	.dw	0,118
+      000064 00                     375 	.uleb128	0
+      000065 05                     376 	.uleb128	5
+      000066 75 6E 73 69 67 6E 65   377 	.ascii "unsigned long"
+             64 20 6C 6F 6E 67
+      000073 00                     378 	.db	0
+      000074 04                     379 	.db	4
+      000075 07                     380 	.db	7
+      000076 05                     381 	.uleb128	5
+      000077 75 6E 73 69 67 6E 65   382 	.ascii "unsigned int"
+             64 20 69 6E 74
+      000083 00                     383 	.db	0
+      000084 02                     384 	.db	2
+      000085 07                     385 	.db	7
+      000086 00                     386 	.uleb128	0
+      000087                        387 Ldebug_info_end:
+                                    388 
+                                    389 	.area .debug_pubnames (NOLOAD)
+      000000 00 00 00 1D            390 	.dw	0,Ldebug_pubnames_end-Ldebug_pubnames_start
+      000004                        391 Ldebug_pubnames_start:
+      000004 00 02                  392 	.dw	2
+      000006 00 00r00r00            393 	.dw	0,(Ldebug_info_start-4)
+      00000A 00 00 00 87            394 	.dw	0,4+Ldebug_info_end-Ldebug_info_start
+      00000E 00 00 00 32            395 	.dw	0,50
+      000012 55 41 52 54 5F 62 65   396 	.ascii "UART_begin"
+             67 69 6E
+      00001C 00                     397 	.db	0
+      00001D 00 00 00 00            398 	.dw	0,0
+      000021                        399 Ldebug_pubnames_end:
+                                    400 
+                                    401 	.area .debug_frame (NOLOAD)
+      000000 00 00                  402 	.dw	0
+      000002 00 10                  403 	.dw	Ldebug_CIE0_end-Ldebug_CIE0_start
+      000004                        404 Ldebug_CIE0_start:
+      000004 FF FF                  405 	.dw	0xffff
+      000006 FF FF                  406 	.dw	0xffff
+      000008 01                     407 	.db	1
+      000009 00                     408 	.db	0
+      00000A 01                     409 	.uleb128	1
+      00000B 7F                     410 	.sleb128	-1
+      00000C 09                     411 	.db	9
+      00000D 0C                     412 	.db	12
+      00000E 08                     413 	.uleb128	8
+      00000F 02                     414 	.uleb128	2
+      000010 89                     415 	.db	137
+      000011 01                     416 	.uleb128	1
+      000012 00                     417 	.db	0
+      000013 00                     418 	.db	0
+      000014                        419 Ldebug_CIE0_end:
+      000014 00 00 00 58            420 	.dw	0,88
+      000018 00 00r00r00            421 	.dw	0,(Ldebug_CIE0_start-4)
+      00001C 00 00r00r00            422 	.dw	0,(Suart$UART_begin$1)	;initial loc
+      000020 00 00 00 51            423 	.dw	0,Suart$UART_begin$20-Suart$UART_begin$1
+      000024 01                     424 	.db	1
+      000025 00 00r00r00            425 	.dw	0,(Suart$UART_begin$1)
+      000029 0E                     426 	.db	14
+      00002A 02                     427 	.uleb128	2
+      00002B 01                     428 	.db	1
+      00002C 00 00r00r01            429 	.dw	0,(Suart$UART_begin$2)
+      000030 0E                     430 	.db	14
+      000031 04                     431 	.uleb128	4
+      000032 01                     432 	.db	1
+      000033 00 00r00r10            433 	.dw	0,(Suart$UART_begin$7)
+      000037 0E                     434 	.db	14
+      000038 06                     435 	.uleb128	6
+      000039 01                     436 	.db	1
+      00003A 00 00r00r13            437 	.dw	0,(Suart$UART_begin$8)
+      00003E 0E                     438 	.db	14
+      00003F 08                     439 	.uleb128	8
+      000040 01                     440 	.db	1
+      000041 00 00r00r15            441 	.dw	0,(Suart$UART_begin$9)
+      000045 0E                     442 	.db	14
+      000046 09                     443 	.uleb128	9
+      000047 01                     444 	.db	1
+      000048 00 00r00r17            445 	.dw	0,(Suart$UART_begin$10)
+      00004C 0E                     446 	.db	14
+      00004D 0A                     447 	.uleb128	10
+      00004E 01                     448 	.db	1
+      00004F 00 00r00r19            449 	.dw	0,(Suart$UART_begin$11)
+      000053 0E                     450 	.db	14
+      000054 0B                     451 	.uleb128	11
+      000055 01                     452 	.db	1
+      000056 00 00r00r1B            453 	.dw	0,(Suart$UART_begin$12)
+      00005A 0E                     454 	.db	14
+      00005B 0C                     455 	.uleb128	12
+      00005C 01                     456 	.db	1
+      00005D 00 00r00r20            457 	.dw	0,(Suart$UART_begin$13)
+      000061 0E                     458 	.db	14
+      000062 04                     459 	.uleb128	4
+      000063 01                     460 	.db	1
+      000064 00 00r00r50            461 	.dw	0,(Suart$UART_begin$19)
+      000068 0E                     462 	.db	14
+      000069 FC FF FF FF 0F         463 	.uleb128	-4
+      00006E 00                     464 	.db	0
+      00006F 00                     465 	.db	0

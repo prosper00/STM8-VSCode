@@ -1,0 +1,112 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000001 L
+  9 A$uart$102                                                     000020 GR
+  9 A$uart$104                                                     000022 GR
+  9 A$uart$105                                                     000024 GR
+  9 A$uart$106                                                     000025 GR
+  9 A$uart$108                                                     000027 GR
+  9 A$uart$111                                                     000029 GR
+  9 A$uart$113                                                     00002B GR
+  9 A$uart$115                                                     00002D GR
+  9 A$uart$117                                                     00002F GR
+  9 A$uart$121                                                     000032 GR
+  9 A$uart$122                                                     000033 GR
+  9 A$uart$123                                                     000035 GR
+  9 A$uart$125                                                     000036 GR
+  9 A$uart$126                                                     000038 GR
+  9 A$uart$128                                                     000039 GR
+  9 A$uart$129                                                     00003B GR
+  9 A$uart$132                                                     00003C GR
+  9 A$uart$134                                                     00003D GR
+  9 A$uart$140                                                     000040 GR
+  9 A$uart$146                                                     000044 GR
+  9 A$uart$147                                                     000047 GR
+  9 A$uart$148                                                     000049 GR
+  9 A$uart$155                                                     00004C GR
+  9 A$uart$156                                                     00004E GR
+  9 A$uart$158                                                     000050 GR
+  9 A$uart$59                                                      000000 GR
+  9 A$uart$64                                                      000001 GR
+  9 A$uart$68                                                      000005 GR
+  9 A$uart$72                                                      000009 GR
+  9 A$uart$76                                                      00000D GR
+  9 A$uart$77                                                      00000F GR
+  9 A$uart$79                                                      000010 GR
+  9 A$uart$80                                                      000012 GR
+  9 A$uart$83                                                      000013 GR
+  9 A$uart$85                                                      000015 GR
+  9 A$uart$87                                                      000017 GR
+  9 A$uart$89                                                      000019 GR
+  9 A$uart$92                                                      00001B GR
+  9 A$uart$93                                                      00001E GR
+ 10 Ldebug_CIE0_end                                                000014 R
+ 10 Ldebug_CIE0_start                                              000004 R
+  D Ldebug_abbrev                                                  000000 R
+  E Ldebug_info_end                                                000087 R
+  E Ldebug_info_start                                              000004 R
+  B Ldebug_line_end                                                000100 R
+  B Ldebug_line_start                                              000004 R
+  B Ldebug_line_stmt                                               00009C R
+  C Ldebug_loc_start                                               000000 R
+  F Ldebug_pubnames_end                                            000021 R
+  F Ldebug_pubnames_start                                          000004 R
+  9 Suart$UART_begin$0                                          =  000000 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 Suart$UART_begin$1                                          =  000000 GR
+  9 Suart$UART_begin$10                                         =  000017 GR
+  9 Suart$UART_begin$11                                         =  000019 GR
+  9 Suart$UART_begin$12                                         =  00001B GR
+  9 Suart$UART_begin$13                                         =  000020 GR
+  9 Suart$UART_begin$14                                         =  000020 GR
+  9 Suart$UART_begin$15                                         =  000032 GR
+  9 Suart$UART_begin$16                                         =  000040 GR
+  9 Suart$UART_begin$17                                         =  000044 GR
+  9 Suart$UART_begin$18                                         =  00004C GR
+  9 Suart$UART_begin$19                                         =  000050 GR
+  9 Suart$UART_begin$2                                          =  000001 GR
+  9 Suart$UART_begin$20                                         =  000051 GR
+  9 Suart$UART_begin$3                                          =  000001 GR
+  9 Suart$UART_begin$4                                          =  000005 GR
+  9 Suart$UART_begin$5                                          =  000009 GR
+  9 Suart$UART_begin$6                                          =  00000D GR
+  9 Suart$UART_begin$7                                          =  000010 GR
+  9 Suart$UART_begin$8                                          =  000013 GR
+  9 Suart$UART_begin$9                                          =  000015 GR
+  9 _UART_begin                                                    000000 GR
+    __divulong                                                     ****** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 3
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size      0   flags    0
+   1 DATA                                       size      0   flags    0
+   2 INITIALIZED                                size      0   flags    0
+   3 DABS                                       size      0   flags    8
+   4 HOME                                       size      0   flags    0
+   5 GSINIT                                     size      0   flags    0
+   6 GSFINAL                                    size      0   flags    0
+   7 CONST                                      size      0   flags    0
+   8 INITIALIZER                                size      0   flags    0
+   9 CODE                                       size     51   flags    0
+   A CABS                                       size      0   flags    8
+   B .debug_line                                size    100   flags  100
+   C .debug_loc                                 size      0   flags  100
+   D .debug_abbrev                              size     3C   flags  100
+   E .debug_info                                size     87   flags  100
+   F .debug_pubnames                            size     21   flags  100
+  10 .debug_frame                               size     70   flags  100
+

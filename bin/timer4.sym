@@ -1,0 +1,466 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000001 L
+  9 A$timer4$100                                                   00001D GR
+  9 A$timer4$101                                                   00001E GR
+  9 A$timer4$102                                                   000020 GR
+  9 A$timer4$104                                                   000021 GR
+  9 A$timer4$105                                                   000022 GR
+  9 A$timer4$108                                                   000023 GR
+  9 A$timer4$109                                                   000025 GR
+  9 A$timer4$111                                                   000026 GR
+  9 A$timer4$112                                                   000029 GR
+  9 A$timer4$113                                                   00002A GR
+  9 A$timer4$114                                                   00002C GR
+  9 A$timer4$116                                                   00002D GR
+  9 A$timer4$117                                                   00002F GR
+  9 A$timer4$121                                                   000030 GR
+  9 A$timer4$122                                                   000032 GR
+  9 A$timer4$124                                                   000033 GR
+  9 A$timer4$129                                                   000035 GR
+  9 A$timer4$130                                                   000037 GR
+  9 A$timer4$132                                                   000039 GR
+  9 A$timer4$140                                                   00003B GR
+  9 A$timer4$141                                                   00003F GR
+  9 A$timer4$142                                                   000040 GR
+  9 A$timer4$143                                                   000042 GR
+  9 A$timer4$145                                                   000043 GR
+  9 A$timer4$146                                                   000045 GR
+  9 A$timer4$152                                                   000046 GR
+  9 A$timer4$158                                                   000047 GR
+  9 A$timer4$162                                                   000049 GR
+  9 A$timer4$179                                                   00004A GR
+  9 A$timer4$184                                                   00004E GR
+  9 A$timer4$188                                                   000052 GR
+  9 A$timer4$189                                                   000053 GR
+  9 A$timer4$190                                                   000056 GR
+  9 A$timer4$194                                                   000059 GR
+  9 A$timer4$195                                                   00005A GR
+  9 A$timer4$196                                                   00005D GR
+  9 A$timer4$200                                                   000060 GR
+  9 A$timer4$206                                                   000064 GR
+  9 A$timer4$211                                                   000068 GR
+  9 A$timer4$216                                                   00006C GR
+  9 A$timer4$217                                                   00006F GR
+  9 A$timer4$218                                                   000071 GR
+  9 A$timer4$219                                                   000073 GR
+  9 A$timer4$224                                                   000076 GR
+  9 A$timer4$230                                                   00007A GR
+  9 A$timer4$237                                                   00007E GR
+  9 A$timer4$246                                                   000082 GR
+  9 A$timer4$258                                                   000083 GR
+  9 A$timer4$265                                                   000085 GR
+  9 A$timer4$268                                                   000089 GR
+  9 A$timer4$269                                                   00008C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$timer4$271                                                   00008E GR
+  9 A$timer4$274                                                   000091 GR
+  9 A$timer4$278                                                   000093 GR
+  9 A$timer4$281                                                   000097 GR
+  9 A$timer4$282                                                   00009B GR
+  9 A$timer4$283                                                   00009E GR
+  9 A$timer4$286                                                   0000A0 GR
+  9 A$timer4$287                                                   0000A1 GR
+  9 A$timer4$288                                                   0000A3 GR
+  9 A$timer4$290                                                   0000A4 GR
+  9 A$timer4$291                                                   0000A5 GR
+  9 A$timer4$294                                                   0000A6 GR
+  9 A$timer4$295                                                   0000A8 GR
+  9 A$timer4$297                                                   0000A9 GR
+  9 A$timer4$298                                                   0000AC GR
+  9 A$timer4$299                                                   0000AD GR
+  9 A$timer4$300                                                   0000AF GR
+  9 A$timer4$302                                                   0000B0 GR
+  9 A$timer4$303                                                   0000B2 GR
+  9 A$timer4$305                                                   0000B3 GR
+  9 A$timer4$306                                                   0000B5 GR
+  9 A$timer4$308                                                   0000B6 GR
+  9 A$timer4$313                                                   0000B8 GR
+  9 A$timer4$314                                                   0000BA GR
+  9 A$timer4$316                                                   0000BC GR
+  9 A$timer4$322                                                   0000BE GR
+  9 A$timer4$323                                                   0000C2 GR
+  9 A$timer4$324                                                   0000C3 GR
+  9 A$timer4$325                                                   0000C5 GR
+  9 A$timer4$327                                                   0000C6 GR
+  9 A$timer4$328                                                   0000C8 GR
+  9 A$timer4$334                                                   0000C9 GR
+  9 A$timer4$335                                                   0000CB GR
+  9 A$timer4$340                                                   0000CD GR
+  9 A$timer4$341                                                   0000CF GR
+  9 A$timer4$343                                                   0000D0 GR
+  9 A$timer4$344                                                   0000D2 GR
+  9 A$timer4$347                                                   0000D3 GR
+  9 A$timer4$349                                                   0000D5 GR
+  9 A$timer4$351                                                   0000D7 GR
+  9 A$timer4$352                                                   0000D8 GR
+  9 A$timer4$355                                                   0000D9 GR
+  9 A$timer4$356                                                   0000DC GR
+  9 A$timer4$359                                                   0000DE GR
+  9 A$timer4$360                                                   0000E0 GR
+  9 A$timer4$370                                                   0000E2 GR
+  9 A$timer4$374                                                   0000E6 GR
+  9 A$timer4$375                                                   0000E9 GR
+  9 A$timer4$378                                                   0000EB GR
+  9 A$timer4$381                                                   0000EE GR
+  9 A$timer4$386                                                   0000F0 GR
+  9 A$timer4$390                                                   0000F4 GR
+  9 A$timer4$391                                                   0000F7 GR
+  9 A$timer4$392                                                   0000F9 GR
+  9 A$timer4$393                                                   0000FC GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 3
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$timer4$397                                                   0000FE GR
+  9 A$timer4$398                                                   0000FF GR
+  9 A$timer4$399                                                   000101 GR
+  9 A$timer4$401                                                   000102 GR
+  9 A$timer4$402                                                   000103 GR
+  9 A$timer4$405                                                   000104 GR
+  9 A$timer4$406                                                   000105 GR
+  9 A$timer4$408                                                   000107 GR
+  9 A$timer4$409                                                   00010A GR
+  9 A$timer4$410                                                   00010C GR
+  9 A$timer4$411                                                   00010E GR
+  9 A$timer4$412                                                   000110 GR
+  9 A$timer4$413                                                   000111 GR
+  9 A$timer4$414                                                   000113 GR
+  9 A$timer4$417                                                   000115 GR
+  9 A$timer4$419                                                   000117 GR
+  9 A$timer4$424                                                   000119 GR
+  9 A$timer4$425                                                   00011B GR
+  9 A$timer4$427                                                   00011D GR
+  9 A$timer4$434                                                   00011F GR
+  9 A$timer4$435                                                   000121 GR
+  9 A$timer4$436                                                   000124 GR
+  9 A$timer4$437                                                   000126 GR
+  9 A$timer4$438                                                   000128 GR
+  9 A$timer4$439                                                   00012A GR
+  9 A$timer4$440                                                   00012C GR
+  9 A$timer4$441                                                   00012E GR
+  9 A$timer4$442                                                   000130 GR
+  9 A$timer4$450                                                   000132 GR
+  9 A$timer4$451                                                   000134 GR
+  9 A$timer4$452                                                   000137 GR
+  9 A$timer4$453                                                   000139 GR
+  9 A$timer4$454                                                   00013B GR
+  9 A$timer4$456                                                   00013C GR
+  9 A$timer4$457                                                   00013E GR
+  9 A$timer4$458                                                   000140 GR
+  9 A$timer4$464                                                   000142 GR
+  9 A$timer4$465                                                   000144 GR
+  9 A$timer4$467                                                   000145 GR
+  9 A$timer4$468                                                   000147 GR
+  9 A$timer4$469                                                   000149 GR
+  9 A$timer4$471                                                   00014B GR
+  9 A$timer4$479                                                   00014D GR
+  9 A$timer4$481                                                   00014E GR
+  9 A$timer4$488                                                   000150 GR
+  9 A$timer4$489                                                   000152 GR
+  9 A$timer4$491                                                   000154 GR
+  9 A$timer4$503                                                   000155 GR
+  9 A$timer4$510                                                   000157 GR
+  9 A$timer4$513                                                   00015B GR
+  9 A$timer4$514                                                   00015E GR
+  9 A$timer4$516                                                   000160 GR
+  9 A$timer4$519                                                   000163 GR
+  9 A$timer4$523                                                   000165 GR
+  9 A$timer4$526                                                   000169 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 4
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$timer4$527                                                   00016D GR
+  9 A$timer4$528                                                   000170 GR
+  9 A$timer4$531                                                   000172 GR
+  9 A$timer4$532                                                   000173 GR
+  9 A$timer4$533                                                   000175 GR
+  9 A$timer4$535                                                   000176 GR
+  9 A$timer4$536                                                   000177 GR
+  9 A$timer4$539                                                   000178 GR
+  9 A$timer4$540                                                   00017A GR
+  9 A$timer4$542                                                   00017B GR
+  9 A$timer4$543                                                   00017E GR
+  9 A$timer4$544                                                   00017F GR
+  9 A$timer4$545                                                   000181 GR
+  9 A$timer4$547                                                   000182 GR
+  9 A$timer4$548                                                   000184 GR
+  9 A$timer4$550                                                   000185 GR
+  9 A$timer4$551                                                   000187 GR
+  9 A$timer4$553                                                   000188 GR
+  9 A$timer4$558                                                   00018A GR
+  9 A$timer4$559                                                   00018C GR
+  9 A$timer4$561                                                   00018E GR
+  9 A$timer4$567                                                   000190 GR
+  9 A$timer4$568                                                   000194 GR
+  9 A$timer4$569                                                   000195 GR
+  9 A$timer4$570                                                   000197 GR
+  9 A$timer4$572                                                   000198 GR
+  9 A$timer4$573                                                   00019A GR
+  9 A$timer4$579                                                   00019B GR
+  9 A$timer4$580                                                   00019D GR
+  9 A$timer4$591                                                   00019F GR
+  9 A$timer4$595                                                   0001A3 GR
+  9 A$timer4$596                                                   0001A6 GR
+  9 A$timer4$599                                                   0001A8 GR
+  9 A$timer4$602                                                   0001AB GR
+  9 A$timer4$607                                                   0001AD GR
+  9 A$timer4$611                                                   0001B1 GR
+  9 A$timer4$612                                                   0001B4 GR
+  9 A$timer4$613                                                   0001B6 GR
+  9 A$timer4$614                                                   0001B9 GR
+  9 A$timer4$618                                                   0001BB GR
+  9 A$timer4$619                                                   0001BC GR
+  9 A$timer4$62                                                    000000 GR
+  9 A$timer4$620                                                   0001BE GR
+  9 A$timer4$622                                                   0001BF GR
+  9 A$timer4$623                                                   0001C0 GR
+  9 A$timer4$626                                                   0001C1 GR
+  9 A$timer4$627                                                   0001C2 GR
+  9 A$timer4$629                                                   0001C4 GR
+  9 A$timer4$630                                                   0001C7 GR
+  9 A$timer4$631                                                   0001C9 GR
+  9 A$timer4$632                                                   0001CB GR
+  9 A$timer4$633                                                   0001CD GR
+  9 A$timer4$634                                                   0001CE GR
+  9 A$timer4$635                                                   0001D0 GR
+  9 A$timer4$638                                                   0001D2 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 5
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$timer4$640                                                   0001D4 GR
+  9 A$timer4$645                                                   0001D6 GR
+  9 A$timer4$646                                                   0001D8 GR
+  9 A$timer4$648                                                   0001DA GR
+  9 A$timer4$655                                                   0001DC GR
+  9 A$timer4$656                                                   0001DE GR
+  9 A$timer4$657                                                   0001E1 GR
+  9 A$timer4$658                                                   0001E3 GR
+  9 A$timer4$659                                                   0001E5 GR
+  9 A$timer4$660                                                   0001E7 GR
+  9 A$timer4$661                                                   0001E9 GR
+  9 A$timer4$662                                                   0001EB GR
+  9 A$timer4$663                                                   0001ED GR
+  9 A$timer4$671                                                   0001EF GR
+  9 A$timer4$672                                                   0001F1 GR
+  9 A$timer4$673                                                   0001F4 GR
+  9 A$timer4$674                                                   0001F6 GR
+  9 A$timer4$675                                                   0001F8 GR
+  9 A$timer4$677                                                   0001F9 GR
+  9 A$timer4$678                                                   0001FB GR
+  9 A$timer4$679                                                   0001FD GR
+  9 A$timer4$685                                                   0001FF GR
+  9 A$timer4$686                                                   000201 GR
+  9 A$timer4$688                                                   000202 GR
+  9 A$timer4$689                                                   000204 GR
+  9 A$timer4$69                                                    000002 GR
+  9 A$timer4$690                                                   000206 GR
+  9 A$timer4$692                                                   000208 GR
+  9 A$timer4$700                                                   00020A GR
+  9 A$timer4$702                                                   00020B GR
+  9 A$timer4$709                                                   00020D GR
+  9 A$timer4$710                                                   00020F GR
+  9 A$timer4$712                                                   000211 GR
+  9 A$timer4$729                                                   000212 GR
+  9 A$timer4$734                                                   000216 GR
+  9 A$timer4$735                                                   000219 GR
+  9 A$timer4$736                                                   00021C GR
+  9 A$timer4$737                                                   000220 GR
+  9 A$timer4$738                                                   000222 GR
+  9 A$timer4$74                                                    000006 GR
+  9 A$timer4$741                                                   000224 GR
+  9 A$timer4$742                                                   000227 GR
+  9 A$timer4$746                                                   00022B GR
+  9 A$timer4$747                                                   00022E GR
+  9 A$timer4$749                                                   000232 GR
+  9 A$timer4$75                                                    000009 GR
+  9 A$timer4$750                                                   000233 GR
+  9 A$timer4$751                                                   000235 GR
+  9 A$timer4$754                                                   000237 GR
+  9 A$timer4$755                                                   00023A GR
+  9 A$timer4$759                                                   00023E GR
+  9 A$timer4$770                                                   000242 GR
+  9 A$timer4$79                                                    00000B GR
+  9 A$timer4$82                                                    00000E GR
+  9 A$timer4$88                                                    000010 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 6
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$timer4$93                                                    000014 GR
+  9 A$timer4$94                                                    000018 GR
+  9 A$timer4$95                                                    00001B GR
+ 10 Ldebug_CIE0_end                                                000014 R
+ 10 Ldebug_CIE0_start                                              000004 R
+ 10 Ldebug_CIE1_end                                                000040 R
+ 10 Ldebug_CIE1_start                                              000030 R
+ 10 Ldebug_CIE2_end                                                0000A8 R
+ 10 Ldebug_CIE2_start                                              000098 R
+ 10 Ldebug_CIE3_end                                                00013C R
+ 10 Ldebug_CIE3_start                                              00012C R
+ 10 Ldebug_CIE4_end                                                000168 R
+ 10 Ldebug_CIE4_start                                              000158 R
+  D Ldebug_abbrev                                                  000000 R
+  E Ldebug_info_end                                                0002BD R
+  E Ldebug_info_start                                              000004 R
+  B Ldebug_line_end                                                000266 R
+  B Ldebug_line_start                                              000004 R
+  B Ldebug_line_stmt                                               0000AA R
+  C Ldebug_loc_start                                               000000 R
+  F Ldebug_pubnames_end                                            00006B R
+  F Ldebug_pubnames_start                                          000004 R
+  9 Stimer4$TIM4_UPD_ISR$82                                     =  000212 GR
+  9 Stimer4$TIM4_UPD_ISR$83                                     =  000212 GR
+  9 Stimer4$TIM4_UPD_ISR$84                                     =  000212 GR
+  9 Stimer4$TIM4_UPD_ISR$85                                     =  000216 GR
+  9 Stimer4$TIM4_UPD_ISR$86                                     =  00022B GR
+  9 Stimer4$TIM4_UPD_ISR$87                                     =  00023E GR
+  9 Stimer4$TIM4_UPD_ISR$88                                     =  000242 GR
+  9 Stimer4$TIM4_UPD_ISR$89                                     =  000242 GR
+  9 Stimer4$TIM4_UPD_ISR$90                                     =  000242 GR
+  9 Stimer4$TIM4_UPD_ISR$91                                     =  000243 GR
+  9 Stimer4$TIM4_init$17                                        =  00004A GR
+  9 Stimer4$TIM4_init$18                                        =  00004A GR
+  9 Stimer4$TIM4_init$19                                        =  00004A GR
+  9 Stimer4$TIM4_init$20                                        =  00004E GR
+  9 Stimer4$TIM4_init$21                                        =  000052 GR
+  9 Stimer4$TIM4_init$22                                        =  000059 GR
+  9 Stimer4$TIM4_init$23                                        =  000060 GR
+  9 Stimer4$TIM4_init$24                                        =  000064 GR
+  9 Stimer4$TIM4_init$25                                        =  000068 GR
+  9 Stimer4$TIM4_init$26                                        =  00006C GR
+  9 Stimer4$TIM4_init$27                                        =  000076 GR
+  9 Stimer4$TIM4_init$28                                        =  00007A GR
+  9 Stimer4$TIM4_init$29                                        =  00007E GR
+  9 Stimer4$TIM4_init$30                                        =  000082 GR
+  9 Stimer4$TIM4_init$31                                        =  000082 GR
+  9 Stimer4$TIM4_init$32                                        =  000083 GR
+  9 Stimer4$delay$33                                            =  000083 GR
+  9 Stimer4$delay$34                                            =  000083 GR
+  9 Stimer4$delay$35                                            =  000085 GR
+  9 Stimer4$delay$36                                            =  000085 GR
+  9 Stimer4$delay$37                                            =  0000BE GR
+  9 Stimer4$delay$38                                            =  0000C9 GR
+  9 Stimer4$delay$39                                            =  0000CD GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 7
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 Stimer4$delay$40                                            =  0000CD GR
+  9 Stimer4$delay$41                                            =  0000D0 GR
+  9 Stimer4$delay$42                                            =  0000D3 GR
+  9 Stimer4$delay$43                                            =  0000D5 GR
+  9 Stimer4$delay$44                                            =  0000D7 GR
+  9 Stimer4$delay$45                                            =  0000D9 GR
+  9 Stimer4$delay$46                                            =  0000DE GR
+  9 Stimer4$delay$47                                            =  0000E2 GR
+  9 Stimer4$delay$48                                            =  0000E2 GR
+  9 Stimer4$delay$49                                            =  00011F GR
+  9 Stimer4$delay$50                                            =  000132 GR
+  9 Stimer4$delay$51                                            =  000132 GR
+  9 Stimer4$delay$52                                            =  00013C GR
+  9 Stimer4$delay$53                                            =  000142 GR
+  9 Stimer4$delay$54                                            =  000142 GR
+  9 Stimer4$delay$55                                            =  000145 GR
+  9 Stimer4$delay$56                                            =  00014D GR
+  9 Stimer4$delay$57                                            =  00014D GR
+  9 Stimer4$delay$58                                            =  000150 GR
+  9 Stimer4$delay$59                                            =  000154 GR
+  9 Stimer4$delay$60                                            =  000155 GR
+  9 Stimer4$delayMicroseconds$61                                =  000155 GR
+  9 Stimer4$delayMicroseconds$62                                =  000155 GR
+  9 Stimer4$delayMicroseconds$63                                =  000157 GR
+  9 Stimer4$delayMicroseconds$64                                =  000157 GR
+  9 Stimer4$delayMicroseconds$65                                =  000190 GR
+  9 Stimer4$delayMicroseconds$66                                =  00019B GR
+  9 Stimer4$delayMicroseconds$67                                =  00019F GR
+  9 Stimer4$delayMicroseconds$68                                =  00019F GR
+  9 Stimer4$delayMicroseconds$69                                =  00019F GR
+  9 Stimer4$delayMicroseconds$70                                =  0001DC GR
+  9 Stimer4$delayMicroseconds$71                                =  0001EF GR
+  9 Stimer4$delayMicroseconds$72                                =  0001EF GR
+  9 Stimer4$delayMicroseconds$73                                =  0001F9 GR
+  9 Stimer4$delayMicroseconds$74                                =  0001FF GR
+  9 Stimer4$delayMicroseconds$75                                =  0001FF GR
+  9 Stimer4$delayMicroseconds$76                                =  000202 GR
+  9 Stimer4$delayMicroseconds$77                                =  00020A GR
+  9 Stimer4$delayMicroseconds$78                                =  00020A GR
+  9 Stimer4$delayMicroseconds$79                                =  00020D GR
+  9 Stimer4$delayMicroseconds$80                                =  000211 GR
+  9 Stimer4$delayMicroseconds$81                                =  000212 GR
+  9 Stimer4$micros$0                                            =  000000 GR
+  9 Stimer4$micros$1                                            =  000000 GR
+  9 Stimer4$micros$10                                           =  00003B GR
+  9 Stimer4$micros$11                                           =  00003B GR
+  9 Stimer4$micros$12                                           =  000046 GR
+  9 Stimer4$micros$13                                           =  000047 GR
+  9 Stimer4$micros$14                                           =  000049 GR
+  9 Stimer4$micros$15                                           =  000049 GR
+  9 Stimer4$micros$16                                           =  00004A GR
+  9 Stimer4$micros$2                                            =  000002 GR
+  9 Stimer4$micros$3                                            =  000002 GR
+  9 Stimer4$micros$4                                            =  000006 GR
+  9 Stimer4$micros$5                                            =  00000B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 8
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 Stimer4$micros$6                                            =  000010 GR
+  9 Stimer4$micros$7                                            =  000014 GR
+  9 Stimer4$micros$8                                            =  00001D GR
+  9 Stimer4$micros$9                                            =  000030 GR
+  9 XFtimer4$micros$0$0                                         =  000049 GR
+  9 XG$TIM4_UPD_ISR$0$0                                         =  000242 GR
+  9 XG$TIM4_init$0$0                                            =  000082 GR
+  9 _TIM4_UPD_ISR                                                  000212 GR
+  9 _TIM4_init                                                     00004A GR
+    __mullong                                                      ****** GX
+  9 _delay                                                         000083 GR
+  9 _delayMicroseconds                                             000155 GR
+    _g_flagMilli                                                   ****** GX
+    _g_micros                                                      ****** GX
+    _g_millis                                                      ****** GX
+  9 _micros                                                        000000 R
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 9
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size      0   flags    0
+   1 DATA                                       size      0   flags    0
+   2 INITIALIZED                                size      0   flags    0
+   3 DABS                                       size      0   flags    8
+   4 HOME                                       size      0   flags    0
+   5 GSINIT                                     size      0   flags    0
+   6 GSFINAL                                    size      0   flags    0
+   7 CONST                                      size      0   flags    0
+   8 INITIALIZER                                size      0   flags    0
+   9 CODE                                       size    243   flags    0
+   A CABS                                       size      0   flags    8
+   B .debug_line                                size    266   flags  100
+   C .debug_loc                                 size    180   flags  100
+   D .debug_abbrev                              size     9E   flags  100
+   E .debug_info                                size    2BD   flags  100
+   F .debug_pubnames                            size     6B   flags  100
+  10 .debug_frame                               size    194   flags  100
+

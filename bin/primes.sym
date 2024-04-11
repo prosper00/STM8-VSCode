@@ -1,0 +1,162 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 1
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000001 L
+  9 A$primes$100                                                   000015 GR
+  9 A$primes$105                                                   000019 GR
+  9 A$primes$108                                                   00001D GR
+  9 A$primes$110                                                   000021 GR
+  9 A$primes$117                                                   000023 GR
+  9 A$primes$118                                                   000026 GR
+  9 A$primes$125                                                   000028 GR
+  9 A$primes$129                                                   00002A GR
+  9 A$primes$132                                                   00002D GR
+  9 A$primes$139                                                   00002F GR
+  9 A$primes$140                                                   000031 GR
+  9 A$primes$143                                                   000032 GR
+  9 A$primes$147                                                   000034 GR
+  9 A$primes$149                                                   000037 GR
+  9 A$primes$152                                                   000038 GR
+  9 A$primes$153                                                   00003A GR
+  9 A$primes$154                                                   00003B GR
+  9 A$primes$162                                                   00003D GR
+  9 A$primes$165                                                   00003E GR
+  9 A$primes$169                                                   000042 GR
+  9 A$primes$175                                                   000045 GR
+  9 A$primes$177                                                   000049 GR
+  9 A$primes$188                                                   00004B GR
+  9 A$primes$189                                                   00004D GR
+  9 A$primes$192                                                   00004E GR
+  9 A$primes$194                                                   000050 GR
+  9 A$primes$197                                                   000051 GR
+  9 A$primes$199                                                   000053 GR
+  9 A$primes$203                                                   000056 GR
+  9 A$primes$205                                                   000059 GR
+  9 A$primes$212                                                   00005B GR
+  9 A$primes$213                                                   00005C GR
+  9 A$primes$217                                                   00005F GR
+  9 A$primes$224                                                   000063 GR
+  9 A$primes$228                                                   000064 GR
+  9 A$primes$231                                                   000067 GR
+  9 A$primes$238                                                   000069 GR
+  9 A$primes$239                                                   00006C GR
+  9 A$primes$241                                                   00006D GR
+  9 A$primes$249                                                   000070 GR
+  9 A$primes$252                                                   000072 GR
+  9 A$primes$254                                                   000076 GR
+  9 A$primes$263                                                   000078 GR
+  9 A$primes$267                                                   00007A GR
+  9 A$primes$66                                                    000000 GR
+  9 A$primes$73                                                    000002 GR
+  9 A$primes$75                                                    000004 GR
+  9 A$primes$78                                                    000006 GR
+  9 A$primes$80                                                    000008 GR
+  9 A$primes$83                                                    00000A GR
+  9 A$primes$85                                                    00000D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 2
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 A$primes$90                                                    000010 GR
+  9 A$primes$97                                                    000014 GR
+  1 Fprimes$NumPrimes$0_0$0                                     =  0003DE GR
+  1 Fprimes$aIsPrime$0_0$0                                      =  000000 GR
+ 10 Ldebug_CIE0_end                                                000014 R
+ 10 Ldebug_CIE0_start                                              000004 R
+  D Ldebug_abbrev                                                  000000 R
+  E Ldebug_info_end                                                00010A R
+  E Ldebug_info_start                                              000004 R
+  B Ldebug_line_end                                                000162 R
+  B Ldebug_line_start                                              000004 R
+  B Ldebug_line_stmt                                               00009E R
+  C Ldebug_loc_start                                               000000 R
+  F Ldebug_pubnames_end                                            000022 R
+  F Ldebug_pubnames_start                                          000004 R
+  9 Sprimes$_CalcPrimes$0                                       =  000000 GR
+  9 Sprimes$_CalcPrimes$1                                       =  000000 GR
+  9 Sprimes$_CalcPrimes$10                                      =  000014 GR
+  9 Sprimes$_CalcPrimes$11                                      =  000014 GR
+  9 Sprimes$_CalcPrimes$12                                      =  000019 GR
+  9 Sprimes$_CalcPrimes$13                                      =  000019 GR
+  9 Sprimes$_CalcPrimes$14                                      =  000023 GR
+  9 Sprimes$_CalcPrimes$15                                      =  000028 GR
+  9 Sprimes$_CalcPrimes$16                                      =  000028 GR
+  9 Sprimes$_CalcPrimes$17                                      =  00002F GR
+  9 Sprimes$_CalcPrimes$18                                      =  00002F GR
+  9 Sprimes$_CalcPrimes$19                                      =  000032 GR
+  9 Sprimes$_CalcPrimes$2                                       =  000002 GR
+  9 Sprimes$_CalcPrimes$20                                      =  000034 GR
+  9 Sprimes$_CalcPrimes$21                                      =  000037 GR
+  9 Sprimes$_CalcPrimes$22                                      =  000038 GR
+  9 Sprimes$_CalcPrimes$23                                      =  00003D GR
+  9 Sprimes$_CalcPrimes$24                                      =  00003D GR
+  9 Sprimes$_CalcPrimes$25                                      =  000042 GR
+  9 Sprimes$_CalcPrimes$26                                      =  000045 GR
+  9 Sprimes$_CalcPrimes$27                                      =  000045 GR
+  9 Sprimes$_CalcPrimes$28                                      =  00004B GR
+  9 Sprimes$_CalcPrimes$29                                      =  00004B GR
+  9 Sprimes$_CalcPrimes$3                                       =  000002 GR
+  9 Sprimes$_CalcPrimes$30                                      =  00004B GR
+  9 Sprimes$_CalcPrimes$31                                      =  000051 GR
+  9 Sprimes$_CalcPrimes$32                                      =  000056 GR
+  9 Sprimes$_CalcPrimes$33                                      =  00005B GR
+  9 Sprimes$_CalcPrimes$34                                      =  00005F GR
+  9 Sprimes$_CalcPrimes$35                                      =  000063 GR
+  9 Sprimes$_CalcPrimes$36                                      =  000063 GR
+  9 Sprimes$_CalcPrimes$37                                      =  000069 GR
+  9 Sprimes$_CalcPrimes$38                                      =  000069 GR
+  9 Sprimes$_CalcPrimes$39                                      =  000070 GR
+  9 Sprimes$_CalcPrimes$4                                       =  000004 GR
+  9 Sprimes$_CalcPrimes$40                                      =  000070 GR
+  9 Sprimes$_CalcPrimes$41                                      =  000070 GR
+  9 Sprimes$_CalcPrimes$42                                      =  000078 GR
+  9 Sprimes$_CalcPrimes$43                                      =  00007A GR
+  9 Sprimes$_CalcPrimes$44                                      =  00007A GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 3
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  9 Sprimes$_CalcPrimes$45                                      =  00007B GR
+  9 Sprimes$_CalcPrimes$5                                       =  000006 GR
+  9 Sprimes$_CalcPrimes$6                                       =  000008 GR
+  9 Sprimes$_CalcPrimes$7                                       =  00000A GR
+  9 Sprimes$_CalcPrimes$8                                       =  000010 GR
+  9 Sprimes$_CalcPrimes$9                                       =  000010 GR
+  9 XG$_CalcPrimes$0$0                                          =  00007A GR
+  1 _NumPrimes                                                     0003DE R
+  9 __CalcPrimes                                                   000000 GR
+    __mulint                                                       ****** GX
+  1 _aIsPrime                                                      000000 R
+    _memset                                                        ****** GX
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (STMicroelectronics STM8)  Page 4
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size      0   flags    0
+   1 DATA                                       size    3E0   flags    0
+   2 INITIALIZED                                size      0   flags    0
+   3 DABS                                       size      0   flags    8
+   4 HOME                                       size      0   flags    0
+   5 GSINIT                                     size      0   flags    0
+   6 GSFINAL                                    size      0   flags    0
+   7 CONST                                      size      0   flags    0
+   8 INITIALIZER                                size      0   flags    0
+   9 CODE                                       size     7B   flags    0
+   A CABS                                       size      0   flags    8
+   B .debug_line                                size    162   flags  100
+   C .debug_loc                                 size     98   flags  100
+   D .debug_abbrev                              size     64   flags  100
+   E .debug_info                                size    10A   flags  100
+   F .debug_pubnames                            size     22   flags  100
+  10 .debug_frame                               size     78   flags  100
+
