@@ -5,6 +5,7 @@ Really, a useless program, but the point of this repo is actually the Visual Stu
 Prequisites:
 - Google, then download and install the STM8-binutils patches, and ensure you can run 'stm8-gdb' on your system
 - Google, then install SDCC
+- Google, then install openocd
 - Install VSCode, and the following extensions:
    - marus25.cortex-debug
    - mcu-debug.peripheral-viewer
