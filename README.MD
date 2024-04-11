@@ -11,5 +11,5 @@ Prequisites:
    - mcu-debug.peripheral-viewer
    - ms-vscode.cpptools
    - ms-vscode.makefile-tools
-- Edit the paths in the json files in the .vscode directory of this repo to reflect the paths on your actual system
+- Edit the paths in the Makefile (and maybe also) json files in the .vscode directory of this repo to reflect the paths on your actual system
 
